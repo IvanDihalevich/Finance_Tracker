@@ -1,0 +1,12 @@
+C:\MyImportantFiles\Finance_Tracker\Finance_Tracker_Backend\Domain\bin\Debug\net9.0\Domain.deps.json
+C:\MyImportantFiles\Finance_Tracker\Finance_Tracker_Backend\Domain\bin\Debug\net9.0\Domain.dll
+C:\MyImportantFiles\Finance_Tracker\Finance_Tracker_Backend\Domain\bin\Debug\net9.0\Domain.pdb
+C:\MyImportantFiles\Finance_Tracker\Finance_Tracker_Backend\Domain\obj\Debug\net9.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\MyImportantFiles\Finance_Tracker\Finance_Tracker_Backend\Domain\obj\Debug\net9.0\Domain.AssemblyInfoInputs.cache
+C:\MyImportantFiles\Finance_Tracker\Finance_Tracker_Backend\Domain\obj\Debug\net9.0\Domain.AssemblyInfo.cs
+C:\MyImportantFiles\Finance_Tracker\Finance_Tracker_Backend\Domain\obj\Debug\net9.0\Domain.csproj.CoreCompileInputs.cache
+C:\MyImportantFiles\Finance_Tracker\Finance_Tracker_Backend\Domain\obj\Debug\net9.0\Domain.sourcelink.json
+C:\MyImportantFiles\Finance_Tracker\Finance_Tracker_Backend\Domain\obj\Debug\net9.0\Domain.dll
+C:\MyImportantFiles\Finance_Tracker\Finance_Tracker_Backend\Domain\obj\Debug\net9.0\refint\Domain.dll
+C:\MyImportantFiles\Finance_Tracker\Finance_Tracker_Backend\Domain\obj\Debug\net9.0\Domain.pdb
+C:\MyImportantFiles\Finance_Tracker\Finance_Tracker_Backend\Domain\obj\Debug\net9.0\ref\Domain.dll
