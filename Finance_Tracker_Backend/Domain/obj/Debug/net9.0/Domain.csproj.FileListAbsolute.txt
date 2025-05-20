@@ -10,3 +10,15 @@ C:\MyImportantFiles\Finance_Tracker\Finance_Tracker_Backend\Domain\obj\Debug\net
 C:\MyImportantFiles\Finance_Tracker\Finance_Tracker_Backend\Domain\obj\Debug\net9.0\refint\Domain.dll
 C:\MyImportantFiles\Finance_Tracker\Finance_Tracker_Backend\Domain\obj\Debug\net9.0\Domain.pdb
 C:\MyImportantFiles\Finance_Tracker\Finance_Tracker_Backend\Domain\obj\Debug\net9.0\ref\Domain.dll
+D:\ToDo_project_Fluter\my_todo_app\Finance_Tracker\Finance_Tracker_Backend\Domain\bin\Debug\net9.0\Domain.deps.json
+D:\ToDo_project_Fluter\my_todo_app\Finance_Tracker\Finance_Tracker_Backend\Domain\bin\Debug\net9.0\Domain.dll
+D:\ToDo_project_Fluter\my_todo_app\Finance_Tracker\Finance_Tracker_Backend\Domain\bin\Debug\net9.0\Domain.pdb
+D:\ToDo_project_Fluter\my_todo_app\Finance_Tracker\Finance_Tracker_Backend\Domain\obj\Debug\net9.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\ToDo_project_Fluter\my_todo_app\Finance_Tracker\Finance_Tracker_Backend\Domain\obj\Debug\net9.0\Domain.AssemblyInfoInputs.cache
+D:\ToDo_project_Fluter\my_todo_app\Finance_Tracker\Finance_Tracker_Backend\Domain\obj\Debug\net9.0\Domain.AssemblyInfo.cs
+D:\ToDo_project_Fluter\my_todo_app\Finance_Tracker\Finance_Tracker_Backend\Domain\obj\Debug\net9.0\Domain.csproj.CoreCompileInputs.cache
+D:\ToDo_project_Fluter\my_todo_app\Finance_Tracker\Finance_Tracker_Backend\Domain\obj\Debug\net9.0\Domain.sourcelink.json
+D:\ToDo_project_Fluter\my_todo_app\Finance_Tracker\Finance_Tracker_Backend\Domain\obj\Debug\net9.0\Domain.dll
+D:\ToDo_project_Fluter\my_todo_app\Finance_Tracker\Finance_Tracker_Backend\Domain\obj\Debug\net9.0\refint\Domain.dll
+D:\ToDo_project_Fluter\my_todo_app\Finance_Tracker\Finance_Tracker_Backend\Domain\obj\Debug\net9.0\Domain.pdb
+D:\ToDo_project_Fluter\my_todo_app\Finance_Tracker\Finance_Tracker_Backend\Domain\obj\Debug\net9.0\ref\Domain.dll

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Api\\Api.csproj": {}
+    "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Api\\Api.csproj": {}
   },
   "projects": {
-    "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Api\\Api.csproj": {
+    "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Api\\Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Api\\Api.csproj",
+        "projectUniqueName": "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Api\\Api.csproj",
         "projectName": "Api",
-        "projectPath": "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Api\\Api.csproj",
-        "packagesPath": "C:\\Users\\ivand\\.nuget\\packages\\",
-        "outputPath": "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Api\\obj\\",
+        "projectPath": "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Api\\Api.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ivand\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,11 +32,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Application\\Application.csproj": {
-                "projectPath": "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Application\\Application.csproj"
+              "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Application\\Application.csproj": {
+                "projectPath": "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Application\\Application.csproj"
               },
-              "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Infrastructure\\Infrastructure.csproj"
+              "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -50,8 +50,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net9.0": {
@@ -103,24 +102,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\Lenovo\\.dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Application\\Application.csproj": {
+    "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Application\\Application.csproj",
+        "projectUniqueName": "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\ivand\\.nuget\\packages\\",
-        "outputPath": "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Application\\obj\\",
+        "projectPath": "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ivand\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -135,8 +134,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Domain\\Domain.csproj"
+              "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Domain\\Domain.csproj"
               }
             }
           }
@@ -150,8 +149,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net9.0": {
@@ -194,24 +192,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\Lenovo\\.dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Domain\\Domain.csproj": {
+    "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\ivand\\.nuget\\packages\\",
-        "outputPath": "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Domain\\obj\\",
+        "projectPath": "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ivand\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -237,8 +235,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net9.0": {
@@ -259,24 +256,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\Lenovo\\.dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Infrastructure\\Infrastructure.csproj": {
+    "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\ivand\\.nuget\\packages\\",
-        "outputPath": "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Infrastructure\\obj\\",
+        "projectPath": "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ivand\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -291,11 +288,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Application\\Application.csproj": {
-                "projectPath": "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Application\\Application.csproj"
+              "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Application\\Application.csproj": {
+                "projectPath": "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Application\\Application.csproj"
               },
-              "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Domain\\Domain.csproj"
+              "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Domain\\Domain.csproj"
               }
             }
           }
@@ -309,8 +306,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net9.0": {
@@ -345,7 +341,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\Lenovo\\.dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

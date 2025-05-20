@@ -8,23 +8,23 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\ivand\\.nuget\\packages\\": {},
+    "C:\\Users\\Lenovo\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Domain\\Domain.csproj",
+      "projectUniqueName": "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Domain\\Domain.csproj",
-      "packagesPath": "C:\\Users\\ivand\\.nuget\\packages\\",
-      "outputPath": "C:\\MyImportantFiles\\Finance_Tracker\\Finance_Tracker_Backend\\Domain\\obj\\",
+      "projectPath": "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Domain\\Domain.csproj",
+      "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+      "outputPath": "D:\\ToDo_project_Fluter\\my_todo_app\\Finance_Tracker\\Finance_Tracker_Backend\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ivand\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -50,8 +50,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.100"
+      }
     },
     "frameworks": {
       "net9.0": {
@@ -72,7 +71,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Lenovo\\.dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,0 +1,225 @@
+:root {
+    --card-heightCategory: 300px;
+    --card-widthCategory: 550px;
+    --shadow-colorCategory: rgba(0, 0, 0, 0.5);
+    --input-color: rgb(88, 199, 250);
+    --background-color: #191c29;
+}
+
+body {
+    min-height: 100vh;
+    background: #212534;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    box-sizing: border-box;
+}
+
+.card-icon {
+    width: 50px;
+    height: 50px;
+    background: url('https://cdn-icons-png.flaticon.com/128/7653/7653246.png') no-repeat center center;
+    background-size: contain;
+    margin-bottom: 15px;
+    filter: invert(22%) sepia(14%) saturate(1042%) hue-rotate(164deg) brightness(102%) contrast(85%);
+}
+
+.leftCard {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-balance {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.card-goal {
+    font-size: 30px;
+}
+
+.rightCard {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.rowCard {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #5ddcff, #4e00c2);
+    width: 0%;
+    transition: width 0.4s ease-in-out;
+    position: relative;
+}
+
+.card-progress-bar::after {
+    content: '';
+    position: absolute;
+    right: -3px;
+    top: -2px;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, #fdd835, #ff9800);
+    border-radius: 50%;
+}
+
+.bank-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
+    margin-bottom: 100px;
+}
+
+.card:hover:before,
+.card:hover:after {
+    animation: none;
+    opacity: 1;
+}
+
+.card {
+    background: linear-gradient(145deg, var(--background-color-lightCategory), var(--background-colorCategory));
+    height: var(--card-heightCategory);
+    width: var(--card-widthCategory);
+    margin: 10px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    font-size: 1.2em;
+    color: var(--input-color);
+    position: relative;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px var(--shadow-colorCategory);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(145deg, #151927, #161b2e);
+}
+
+.card-name {
+    font-weight: bold;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.new-bank-card-balance {
+    width: 100%;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.card-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.new-bank-card {
+    margin-top: 120px;
+    margin-bottom: 120px;
+    background: linear-gradient(145deg, var(--background-color-lightCategory), var(--background-colorCategory));
+    height: var(--card-heightCategory);
+    width: var(--card-widthCategory);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 15px var(--shadow-colorCategory);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: var(--input-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+input {
+    margin: 5px;
+    padding: 8px;
+    color: var(--input-color);
+    background: #212534;
+    border: 1px solid var(--input-color);
+    border-radius: 4px;
+}
+
+button {
+    margin: 5px;
+    padding: 8px 12px;
+    color: var(--input-color);
+    background: transparent;
+    border: 1px solid var(--input-color);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--input-color);
+    color: #fff;
+}
+
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+}
+
+.card-with-border {
+    position: relative;
+    border: 5px solid #0076ff5e;
+}
+
+
+
+.card-progress {
+    width: 90%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 10px;
+    position: relative;
+}
+
+.card-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #5ddcff, #4e00c2);
+    width: 0%;
+    transition: width 0.4s ease;
+}
+
+@keyframes spin {
+    0% {
+        --rotate: 0deg;
+    }
+
+    100% {
+        --rotate: 360deg;
+    }
+}

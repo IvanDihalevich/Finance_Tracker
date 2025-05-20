@@ -1,0 +1,299 @@
+.containerTransaction {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+.root {
+    width: 100%;
+    height: 100%;
+}
+
+.Balance {
+    background-color: #191c29;
+    box-shadow: 0 4px 8px rgba(0, 89, 255, 0.2), 0 -2px 6px rgba(0, 89, 255, 0.2),
+        4px 0 6px rgba(155, 190, 255, 0.1), -2px 0 6px rgba(0, 16, 53, 0.1);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    table-layout: auto;
+    width: 100%;
+    aspect-ratio: 1 / 0.6;
+    position: relative;
+}
+
+.Balance::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+    filter: blur(calc(var(--card-height) / 6));
+    transform: scale(0.8);
+
+    transition: opacity 0.5s;
+    animation: spin 2.5s linear infinite;
+}
+
+
+.BalanceText {
+    font-size: 6vw;
+}
+
+.TranasctionNameDiv {
+    margin-top: 40px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.TransactionName.active {
+
+    color: rgb(88, 199, 250);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.inputSumCreate {
+    width: 25%;
+    height: 50%;
+}
+
+.SelectCategoryCreate {
+    width: 25%;
+    height: 50%;
+
+}
+
+.ButtonTransactionCreate {
+    width: 100%;
+    height: 100%;
+}
+
+.Buttondiv {
+    display: flex;
+    width: 25%;
+    height: 50%;
+}
+
+.SelectCategoryCreate {
+    background: #212534;
+    color: rgb(88, 199, 250);
+}
+
+.SelectCategoryEdit {
+    background: #212534;
+    color: rgb(88, 199, 250);
+    width: 200px;
+    padding: 8px;
+    border: 1px solid rgb(88, 199, 250);
+    border-radius: 4px;
+}
+
+.UperCreateBalance {
+    border-radius: 12px;
+    padding: 12px;
+    table-layout: auto;
+    width: 90%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+}
+
+.BottomCreateBalance {
+    background-color: #191c29;
+    box-shadow: 0 4px 8px rgba(0, 89, 255, 0.2), 0 -2px 6px rgba(0, 89, 255, 0.2),
+        4px 0 6px rgba(155, 190, 255, 0.1), -2px 0 6px rgba(0, 16, 53, 0.1);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    table-layout: auto;
+    width: 90%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.TableDiv {
+    width: 60%;
+    height: 800px;
+}
+
+.AddBalance {
+    padding: 12px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Table {
+    flex-direction: column;
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.RightContainer {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 50%;
+    text-align: center;
+    align-items: center;
+
+}
+
+.TransactionName {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: font-size 0.3s ease;
+
+}
+
+
+.MainContainerTransaction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 1400px;
+}
+
+.files-table {
+    background-color: #191c29;
+    box-shadow: 0 4px 8px rgba(0, 89, 255, 0.2), 0 -2px 6px rgba(0, 89, 255, 0.2),
+        4px 0 6px rgba(155, 190, 255, 0.1), -2px 0 6px rgba(0, 16, 53, 0.1);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    table-layout: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.files-table-header {
+    display: flex;
+}
+
+.files-table-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.table-cell {
+    font-size: 22px;
+    line-height: 16px;
+    color: #ffffff;
+    padding: 8px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.files-table-row:hover {
+    background-color: #0d111f;
+    cursor: pointer;
+}
+
+.column-header {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 16px;
+    color: rgb(88, 199, 250);
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.column-create-date {
+    width: 30%;
+}
+
+.column-sum {
+    width: 20%;
+}
+
+.column-category {
+    width: 25%;
+}
+
+.column-action {
+    width: 25%;
+}
+
+.column-sumCreate {
+    width: 33%;
+}
+
+.column-categoryCreate {
+    width: 33%;
+}
+
+.column-actionCreate {
+    width: 33%;
+}
+
+.action-cell {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+    gap: 10px;
+}
+
+.page-btn {
+    background-color: #007bff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.page-btn:hover {
+    background-color: #0056b3;
+}
+
+.page-btn.active {
+    background-color: #004085;
+}
+
+.page-btn:focus {
+    outline: none;
+}
+
+.errorCreateTransaction {
+    margin-top: 20px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
