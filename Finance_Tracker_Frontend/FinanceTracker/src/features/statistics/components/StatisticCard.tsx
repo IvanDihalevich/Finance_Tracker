@@ -36,7 +36,7 @@ const StatisticCard: React.FC<Props> = ({
     >
       <div className="StatisticCard">
         <div>
-          <h1 className="SumPlus2">Доходи:</h1>
+          <h1 className="SumPlus2">Income:</h1>
           <h1 className="SumPlus">
             {statisticsForAllCategories !== null
               ? `${statisticsForAllCategories.plusSum.toLocaleString()}$`
@@ -80,7 +80,7 @@ const StatisticCard: React.FC<Props> = ({
     >
       <div className="StatisticCard">
         <div>
-          <h1 className="SumMinus2">Витрати:</h1>
+          <h1 className="SumMinus2">Spending:</h1>
           <h1 className="SumMinus">
             {statisticsForAllCategories !== null
               ? `${statisticsForAllCategories.minusSum.toLocaleString()}$`

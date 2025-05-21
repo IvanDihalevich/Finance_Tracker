@@ -18,10 +18,10 @@ const Login: React.FC = () => {
       if (success) {
         navigate("/transaction");
       } else {
-        setError("Не вдалося увійти. Перевірте логін або пароль.");
+        setError("Failed to log in. Check your username or password.");
       }
     } catch (err) {
-      setError("Помилка під час входу. Спробуйте пізніше.");
+      setError("Error signing in. Please try again later.");
     }
   };
 
@@ -31,20 +31,20 @@ const Login: React.FC = () => {
         <form className="login-form" onSubmit={handleLogin}>
           <input
             type="text"
-            placeholder="Логін"
+            placeholder="Login"
             value={login}
             onChange={(e) => setLogin(e.target.value)}
           />
           <input
             type="password"
-            placeholder="Пароль"
+            placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button type="submit">Увійти</button>
+          <button type="submit">Login</button>
           {error && <p style={{ color: "red" }}>{error}</p>}
           <p className="message">
-            Ще не зареєстровані? <a href="/register">Створити акаунт</a>
+          Not registered? <a href="/register">Create an account</a>
           </p>
         </form>
       </div>

@@ -11,7 +11,7 @@ const CategoryStatisticCard: React.FC<Props> = ({
 }) => {
   return (
     <div className="Container_Category">
-      <h1 className="TopName_Category">Категорії: </h1>
+      <h1 className="TopName_Category">Category: </h1>
       <div className="Card_Category">
         {statisticsForAllCategories.map((category) => (
           <div
@@ -26,7 +26,7 @@ const CategoryStatisticCard: React.FC<Props> = ({
               <div className="StatisticName_Category">{category.name}</div>
               <div className="RowStatistic">
                 <div>
-                  Дохід:
+                Income:
                   <div>
                     <span className="SumPlus_Category">
                       +{category.plusSum.toLocaleString()} $
@@ -34,7 +34,7 @@ const CategoryStatisticCard: React.FC<Props> = ({
                   </div>
                 </div>
                 <div>
-                  Витрати:
+                Spending:
                   <div>
                     <span className="SumMinus_Category">
                       {category.minusSum.toLocaleString()} $
@@ -42,7 +42,7 @@ const CategoryStatisticCard: React.FC<Props> = ({
                   </div>
                 </div>
               </div>
-              <div>Транзакції: {category.countTransaction}</div>
+              <div>Transaction: {category.countTransaction}</div>
             </div>
           </div>
         ))}

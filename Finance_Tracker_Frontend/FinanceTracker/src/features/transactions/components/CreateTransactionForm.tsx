@@ -25,7 +25,7 @@ const CreateTransactionForm: React.FC<Props> = ({
 
   const handleTransaction = async (isIncome: boolean) => {
     if (!newTransactionCategoryId) {
-      addNotification("Будь ласка, оберіть категорію.", "error");
+      addNotification("Please select a category.", "error");
       return;
     }
 
@@ -33,15 +33,15 @@ const CreateTransactionForm: React.FC<Props> = ({
     if (isNaN(parsedSum) || parsedSum <= 0) {
       addNotification(
         isIncome
-          ? "Неможна вводити від’ємне число для доходу."
-          : "Неможна вводити від’ємне число для витрат.",
+          ? "You cannot enter a negative number for income."
+          : "You cannot enter a negative number for expenses.",
         "error"
       );
       return;
     }
 
     if (!isIncome && parsedSum > balance) {
-      addNotification("У вас недостатньо балансу для цієї витрати.", "error");
+      addNotification("You don't have enough balance for this expense.", "error");
       return;
     }
 
@@ -56,16 +56,16 @@ const CreateTransactionForm: React.FC<Props> = ({
       fetchBalance();
       addNotification(
         isIncome
-          ? "Транзакція доходу створена успішно."
-          : "Транзакція витрати створена успішно.",
+          ? "The revenue transaction was created successfully."
+          : "Expense transaction created successfully.",
         "success"
       );
     } catch (error) {
       console.error("Failed to create transaction", error);
       addNotification(
         isIncome
-          ? "Не вдалося створити транзакцію доходу."
-          : "Не вдалося створити транзакцію витрати.",
+          ? "Failed to create revenue transaction."
+          : "Failed to create expense transaction.",
         "error"
       );
     }
@@ -95,7 +95,7 @@ const CreateTransactionForm: React.FC<Props> = ({
           onChange={(e) => setNewTransactionCategoryId(e.target.value)}
         >
           <option value="" disabled>
-            Оберіть категорію
+          Choose a category
           </option>
           {categories.map((category) => (
             <option key={category.id} value={category.id}>
@@ -108,13 +108,13 @@ const CreateTransactionForm: React.FC<Props> = ({
             className="ButtonTransactionCreate"
             onClick={() => handleTransaction(true)}
           >
-            Дохід
+            Income
           </button>
           <button
             className="ButtonTransactionCreate"
             onClick={() => handleTransaction(false)}
           >
-            Витрата
+            Cost
           </button>
         </div>
       </div>

@@ -9,7 +9,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a78d2840-5a5f-4798-acff-0f5582527aca" name="Changes" comment="" />
+    <list default="true" id="a78d2840-5a5f-4798-acff-0f5582527aca" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/api/dto/BankDto.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/api/dto/BankTransactionDto.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/api/services/BankService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/api/services/BankTransactionService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/components/Register/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/components/Register/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/components/leyouts/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/components/leyouts/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/components/leyouts/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/components/leyouts/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/components/loading/LoadingIndicator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/components/loading/LoadingIndicator.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/css/BankComponent.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/features/banks/BankPage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/features/banks/components/BankCard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/features/banks/components/NewBankCard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/features/banks/components/TransactionHistoryModal.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/features/categoryStatistics/components/CategoryStatisticCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/features/categoryStatistics/components/CategoryStatisticCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/features/statistics/components/StatisticCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/features/statistics/components/StatisticCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/features/statistics/components/StatisticFormToggle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/features/statistics/components/StatisticFormToggle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/features/transactions/TransactionPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/features/transactions/TransactionPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/features/transactions/components/BalanceDisplay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/features/transactions/components/BalanceDisplay.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/features/transactions/components/BankTransactionForm.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/features/transactions/components/CreateTransactionForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/features/transactions/components/CreateTransactionForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/features/transactions/components/TransactionFormToggle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/features/transactions/components/TransactionFormToggle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/features/transactions/components/TransactionTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/features/transactions/components/TransactionTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/routes/BasicRouter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/routes/BasicRouter.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,12 +51,12 @@
     &quot;assignee&quot;: &quot;IvanDihalevich&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/IvanDihalevich/Finance_Tracker.git&quot;,
-    &quot;accountId&quot;: &quot;00c47db5-354d-4506-bd93-eb2dffcab195&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/IvanDihalevich/Finance_Tracker.git",
+    "accountId": "9cb34d93-5fee-4913-9372-de1ed566bbaf"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -42,26 +66,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.Api: IIS Express.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;backend&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.Api: IIS Express.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "frontend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Api: IIS Express">
     <configuration name="Api: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Api/Api.csproj" />
@@ -120,6 +144,7 @@
       <workItem from="1747777267421" duration="116000" />
       <workItem from="1747777398834" duration="1520000" />
       <workItem from="1747854138236" duration="4491000" />
+      <workItem from="1747863237783" duration="1148000" />
     </task>
     <servers />
   </component>

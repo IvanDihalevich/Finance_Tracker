@@ -11,8 +11,6 @@ const Header: React.FC = () => {
     switch (location.pathname) {
       case "/transaction":
         return "Your Transaction";
-      case "/bank":
-        return "Your Banks";
       case "/statistic":
         return "Your Statistic";
       case "/category":
@@ -37,9 +35,6 @@ const Header: React.FC = () => {
               <>
                 <li>
                   <Link to="/transaction">Your Transaction</Link>
-                </li>
-                <li>
-                  <Link to="/bank">Your Banks</Link>
                 </li>
                 <li>
                   <Link to="/category">Category</Link>

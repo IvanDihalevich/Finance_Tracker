@@ -48,9 +48,9 @@ const TransactionTable: React.FC<Props> = ({
         );
         setTransactions(updatedTransactions);
         fetchBalance();
-        addNotification("Транзакцію успішно видалено.", "success");
+        addNotification("The transaction was successfully deleted.", "success");
       } catch (error) {
-        addNotification("Не вдалось видалити транзакцію.", "error");
+        addNotification("Unable to delete transaction.", "error");
         console.error("Failed to delete transaction", error);
       }
     },
@@ -63,7 +63,7 @@ const TransactionTable: React.FC<Props> = ({
         const selectedCategory = categories.find(
           (category) => category.name === updatedTransaction.categoryName
         );
-        if (!selectedCategory) throw new Error("Категорія не знайдена");
+        if (!selectedCategory) throw new Error("Category not found");
 
         await TransactionService.update(updatedTransaction.id, {
           sum: updatedTransaction.sum,
@@ -77,9 +77,9 @@ const TransactionTable: React.FC<Props> = ({
         setEditingTransactionId(null);
         setUpdatedTransaction(null);
         fetchBalance();
-        addNotification("Транзакцію успішно збережено.", "success");
+        addNotification("The transaction was successfully saved.", "success");
       } catch (error) {
-        addNotification("Не вдалось зберегти транзакцію.", "error");
+        addNotification("The transaction could not be saved.", "error");
         console.error("Failed to save transaction", error);
       }
     }
@@ -94,7 +94,7 @@ const TransactionTable: React.FC<Props> = ({
 
   return (
     <div className="Table">
-      <h1 className="TransactionName">Ваші транзакції</h1>
+      <h1 className="TransactionName">Your transactions</h1>
       <div className="files-table">
         <div className="files-table-header">
           <div className="column-header table-cell column-create-date">

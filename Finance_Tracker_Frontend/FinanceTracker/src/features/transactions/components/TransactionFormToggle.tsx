@@ -11,7 +11,6 @@ const TransactionFormToggle: React.FC<Props> = ({
   setActiveForm,
 }) => {
   const handleCreateTransaction = () => setActiveForm("createTransaction");
-  const handleInteractionWithBank = () => setActiveForm("interactionWithBank");
 
   return (
     <div className="TranasctionNameDiv">
@@ -21,16 +20,9 @@ const TransactionFormToggle: React.FC<Props> = ({
         }`}
         onClick={handleCreateTransaction}
       >
-        Створити транзакцію
+        Create a transaction
       </h1>
-      <h1
-        className={`TransactionName ${
-          activeForm === "interactionWithBank" ? "active" : ""
-        }`}
-        onClick={handleInteractionWithBank}
-      >
-        Взаємодія з банкою
-      </h1>
+   
     </div>
   );
 };
