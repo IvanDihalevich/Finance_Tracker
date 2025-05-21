@@ -40,27 +40,6 @@ namespace Infrastructure.Persistence.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "banks",
-                columns: table => new
-                {
-                    id = table.Column<Guid>(type: "uuid", nullable: false),
-                    name = table.Column<string>(type: "varchar(255)", nullable: false),
-                    balance = table.Column<decimal>(type: "numeric(18,2)", nullable: false),
-                    balance_goal = table.Column<decimal>(type: "numeric(18,2)", nullable: false),
-                    user_id = table.Column<Guid>(type: "uuid", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("pk_banks", x => x.id);
-                    table.ForeignKey(
-                        name: "fk_banks_users_user_id",
-                        column: x => x.user_id,
-                        principalTable: "users",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "transactions",
                 columns: table => new
                 {
@@ -87,48 +66,6 @@ namespace Infrastructure.Persistence.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "bank_transactions",
-                columns: table => new
-                {
-                    id = table.Column<Guid>(type: "uuid", nullable: false),
-                    amount = table.Column<decimal>(type: "numeric(18,2)", nullable: false),
-                    created_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: false, defaultValueSql: "timezone('utc', now())"),
-                    bank_id = table.Column<Guid>(type: "uuid", nullable: false),
-                    user_id = table.Column<Guid>(type: "uuid", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("pk_bank_transactions", x => x.id);
-                    table.ForeignKey(
-                        name: "fk_bank_transactions_banks_bank_id",
-                        column: x => x.bank_id,
-                        principalTable: "banks",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "fk_bank_transactions_users_user_id",
-                        column: x => x.user_id,
-                        principalTable: "users",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateIndex(
-                name: "ix_bank_transactions_bank_id",
-                table: "bank_transactions",
-                column: "bank_id");
-
-            migrationBuilder.CreateIndex(
-                name: "ix_bank_transactions_user_id",
-                table: "bank_transactions",
-                column: "user_id");
-
-            migrationBuilder.CreateIndex(
-                name: "ix_banks_user_id",
-                table: "banks",
-                column: "user_id");
-
             migrationBuilder.CreateIndex(
                 name: "ix_transactions_category_id",
                 table: "transactions",
@@ -144,13 +81,7 @@ namespace Infrastructure.Persistence.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "bank_transactions");
-
-            migrationBuilder.DropTable(
                 name: "transactions");
-
-            migrationBuilder.DropTable(
-                name: "banks");
 
             migrationBuilder.DropTable(
                 name: "categorys");

@@ -1,11 +1,8 @@
 ﻿using System.Net;
 using System.Net.Http.Headers;
-using Domain.Banks;
 using Domain.Categorys;
 using Domain.Transactions;
 using Domain.Users;
-using FluentAssertions;
-using Microsoft.EntityFrameworkCore;
 using Tests.Common;
 using Tests.Data;
 using Xunit;

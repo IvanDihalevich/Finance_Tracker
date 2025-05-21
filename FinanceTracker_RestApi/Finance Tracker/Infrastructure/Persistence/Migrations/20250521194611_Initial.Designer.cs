@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250520215033_Initial")]
+    [Migration("20250521194611_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -24,74 +24,6 @@ namespace Infrastructure.Persistence.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
-
-            modelBuilder.Entity("Domain.BankTransactions.BankTransaction", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .HasColumnType("uuid")
-                        .HasColumnName("id");
-
-                    b.Property<decimal>("Amount")
-                        .HasColumnType("decimal(18, 2)")
-                        .HasColumnName("amount");
-
-                    b.Property<Guid>("BankId")
-                        .HasColumnType("uuid")
-                        .HasColumnName("bank_id");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("timestamp with time zone")
-                        .HasColumnName("created_at")
-                        .HasDefaultValueSql("timezone('utc', now())");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uuid")
-                        .HasColumnName("user_id");
-
-                    b.HasKey("Id")
-                        .HasName("pk_bank_transactions");
-
-                    b.HasIndex("BankId")
-                        .HasDatabaseName("ix_bank_transactions_bank_id");
-
-                    b.HasIndex("UserId")
-                        .HasDatabaseName("ix_bank_transactions_user_id");
-
-                    b.ToTable("bank_transactions", (string)null);
-                });
-
-            modelBuilder.Entity("Domain.Banks.Bank", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .HasColumnType("uuid")
-                        .HasColumnName("id");
-
-                    b.Property<decimal>("Balance")
-                        .HasColumnType("decimal(18, 2)")
-                        .HasColumnName("balance");
-
-                    b.Property<decimal>("BalanceGoal")
-                        .HasColumnType("decimal(18, 2)")
-                        .HasColumnName("balance_goal");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("varchar(255)")
-                        .HasColumnName("name");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uuid")
-                        .HasColumnName("user_id");
-
-                    b.HasKey("Id")
-                        .HasName("pk_banks");
-
-                    b.HasIndex("UserId")
-                        .HasDatabaseName("ix_banks_user_id");
-
-                    b.ToTable("banks", (string)null);
-                });
 
             modelBuilder.Entity("Domain.Categorys.Category", b =>
                 {
@@ -182,39 +114,6 @@ namespace Infrastructure.Persistence.Migrations
                         .HasName("pk_users");
 
                     b.ToTable("users", (string)null);
-                });
-
-            modelBuilder.Entity("Domain.BankTransactions.BankTransaction", b =>
-                {
-                    b.HasOne("Domain.Banks.Bank", "Bank")
-                        .WithMany()
-                        .HasForeignKey("BankId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
-                        .HasConstraintName("fk_bank_transactions_banks_bank_id");
-
-                    b.HasOne("Domain.Users.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
-                        .HasConstraintName("fk_bank_transactions_users_user_id");
-
-                    b.Navigation("Bank");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("Domain.Banks.Bank", b =>
-                {
-                    b.HasOne("Domain.Users.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
-                        .HasConstraintName("fk_banks_users_user_id");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Domain.Transactions.Transaction", b =>
