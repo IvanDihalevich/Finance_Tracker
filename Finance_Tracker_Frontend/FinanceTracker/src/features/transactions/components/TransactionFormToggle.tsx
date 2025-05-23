@@ -20,7 +20,7 @@ const TransactionFormToggle: React.FC<Props> = ({
         }`}
         onClick={handleCreateTransaction}
       >
-        Create a transaction
+        Create a transactionasdasd
       </h1>
    
     </div>

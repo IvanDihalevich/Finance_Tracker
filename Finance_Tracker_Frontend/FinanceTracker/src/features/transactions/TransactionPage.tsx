@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useMemo, useCallback } from "react";
-import TransactionFormToggle from "./components/TransactionFormToggle";
 import CreateTransactionForm from "./components/CreateTransactionForm";
 import TransactionTable from "./components/TransactionTable";
 import BalanceDisplay from "./components/BalanceDisplay";
@@ -16,8 +15,6 @@ const TransactionPage: React.FC = () => {
   const [categories, setCategories] = useState<CategoryDto[]>([]);
   const [balance, setBalance] = useState<number>(0);
   const [loading, setLoading] = useState(false);
-
-  const [activeForm, setActiveForm] = useState("createTransaction");
 
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
@@ -68,8 +65,6 @@ const TransactionPage: React.FC = () => {
     }
   }, []);
 
-
-
   useEffect(() => {
     fetchBalance();
     fetchTransactions();
@@ -85,24 +80,21 @@ const TransactionPage: React.FC = () => {
   const handlePageChange = (page: number) => setCurrentPage(page);
 
   return (
-    <div>
-      <div className="MainContainerTransaction">
-        <div className="AddBalance">
-          <TransactionFormToggle
-            activeForm={activeForm}
-            setActiveForm={setActiveForm}
+    <div className="tp-root">
+      <div className="tp-main-container">
+        <div className="tp-form-section">
+          <CreateTransactionForm
+            categories={memoizedCategories}
+            balance={balance}
+            fetchTransactions={fetchTransactions}
+            fetchBalance={fetchBalance}
           />
-            <CreateTransactionForm
-              categories={memoizedCategories}
-              balance={balance}
-              fetchTransactions={fetchTransactions}
-              fetchBalance={fetchBalance}
-            />
         </div>
+
         {loading && <LoadingIndicator />}
 
-        <div className="containerTransaction">
-          <div className="TableDiv">
+        <div className="tp-data-section">
+          <div className="tp-table-wrapper">
             <TransactionTable
               transactions={memoizedTransactions}
               categories={memoizedCategories}

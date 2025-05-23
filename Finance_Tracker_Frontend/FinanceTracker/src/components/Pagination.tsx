@@ -7,11 +7,7 @@ type Props = {
   handlePageChange: (page: number) => void;
 };
 
-const Pagination: React.FC<Props> = ({
-  currentPage,
-  totalPages,
-  handlePageChange,
-}) => {
+const Pagination: React.FC<Props> = ({ currentPage, totalPages, handlePageChange }) => {
   const renderPaginationButtons = () => {
     const maxPagesToShow = 5;
     const buttons = [];
@@ -53,10 +49,29 @@ const Pagination: React.FC<Props> = ({
         buttons.push(createButton(totalPages));
       }
     }
+
     return buttons;
   };
 
-  return <div className="pagination">{renderPaginationButtons()}</div>;
+  return (
+    <div className="pagination">
+      <button
+        className="page-btn nav-btn"
+        disabled={currentPage === 1}
+        onClick={() => handlePageChange(currentPage - 1)}
+      >
+        ◄ Prev
+      </button>
+      {renderPaginationButtons()}
+      <button
+        className="page-btn nav-btn"
+        disabled={currentPage === totalPages}
+        onClick={() => handlePageChange(currentPage + 1)}
+      >
+        Next ►
+      </button>
+    </div>
+  );
 };
 
 export default Pagination;

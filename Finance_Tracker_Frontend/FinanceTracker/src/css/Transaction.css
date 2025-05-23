@@ -1,299 +1,315 @@
-.containerTransaction {
+
+:root {
+    --bg-dark: #1a1a1a;
+    --bg-dark-light: #222;
+    --text-light: #f0f0f0;
+    --accent: #0ff;
+    --accent-hover: #0cc;
+    --error: #ff4d4d;
+    --success: #4dff88;
+    --input-bg: #2a2a2a;
+    --border: #333;
+    --shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+  }
+  
+  .create-transaction-container {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    max-width: 600px;
+    margin: auto;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .create-transaction-header {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-around;
-    margin-top: 100px;
-}
-
-.root {
-    width: 100%;
-    height: 100%;
-}
-
-.Balance {
-    background-color: #191c29;
-    box-shadow: 0 4px 8px rgba(0, 89, 255, 0.2), 0 -2px 6px rgba(0, 89, 255, 0.2),
-        4px 0 6px rgba(155, 190, 255, 0.1), -2px 0 6px rgba(0, 16, 53, 0.1);
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    table-layout: auto;
-    width: 100%;
-    aspect-ratio: 1 / 0.6;
-    position: relative;
-}
-
-.Balance::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    background-image: linear-gradient(var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
-    opacity: 1;
-    filter: blur(calc(var(--card-height) / 6));
-    transform: scale(0.8);
-
-    transition: opacity 0.5s;
-    animation: spin 2.5s linear infinite;
-}
-
-
-.BalanceText {
-    font-size: 6vw;
-}
-
-.TranasctionNameDiv {
-    margin-top: 40px;
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-
-}
-
-.TransactionName.active {
-
-    color: rgb(88, 199, 250);
-    font-size: 24px;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+  }
+  
+  .create-transaction-header .table-cell {
+    flex: 1;
+    text-align: center;
     font-weight: bold;
-}
-
-.inputSumCreate {
-    width: 25%;
-    height: 50%;
-}
-
-.SelectCategoryCreate {
-    width: 25%;
-    height: 50%;
-
-}
-
-.ButtonTransactionCreate {
-    width: 100%;
-    height: 100%;
-}
-
-.Buttondiv {
+    font-size: 1rem;
+    color: var(--accent);
+  }
+  
+  .create-transaction-form {
     display: flex;
-    width: 25%;
-    height: 50%;
-}
-
-.SelectCategoryCreate {
-    background: #212534;
-    color: rgb(88, 199, 250);
-}
-
-.SelectCategoryEdit {
-    background: #212534;
-    color: rgb(88, 199, 250);
-    width: 200px;
-    padding: 8px;
-    border: 1px solid rgb(88, 199, 250);
-    border-radius: 4px;
-}
-
-.UperCreateBalance {
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .create-transaction-sum-input,
+  .create-transaction-category-select {
+    background-color: var(--input-bg);
+    border: 1px solid var(--border);
+    color: var(--text-light);
+    padding: 0.5rem 1rem;
     border-radius: 12px;
-    padding: 12px;
-    table-layout: auto;
-    width: 90%;
-    height: 80px;
-    display: flex;
-    flex-direction: row;
-}
-
-.BottomCreateBalance {
-    background-color: #191c29;
-    box-shadow: 0 4px 8px rgba(0, 89, 255, 0.2), 0 -2px 6px rgba(0, 89, 255, 0.2),
-        4px 0 6px rgba(155, 190, 255, 0.1), -2px 0 6px rgba(0, 16, 53, 0.1);
-    border-radius: 12px;
-    padding: 12px;
-    display: flex;
-    table-layout: auto;
-    width: 90%;
-    height: 80px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-
-}
-
-.TableDiv {
-    width: 60%;
-    height: 800px;
-}
-
-.AddBalance {
-    padding: 12px;
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.Table {
-    flex-direction: column;
-
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    text-align: center;
-
-}
-
-.RightContainer {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    height: 50%;
-    text-align: center;
-    align-items: center;
-
-}
-
-.TransactionName {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: 18px;
-    cursor: pointer;
-    transition: font-size 0.3s ease;
-
-}
-
-
-.MainContainerTransaction {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 1400px;
-}
-
-.files-table {
-    background-color: #191c29;
-    box-shadow: 0 4px 8px rgba(0, 89, 255, 0.2), 0 -2px 6px rgba(0, 89, 255, 0.2),
-        4px 0 6px rgba(155, 190, 255, 0.1), -2px 0 6px rgba(0, 16, 53, 0.1);
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    table-layout: auto;
-    width: 100%;
-    height: 100%;
-}
-
-.files-table-header {
-    display: flex;
-}
-
-.files-table-row {
-    display: flex;
-    flex-direction: row;
-}
-
-.table-cell {
-    font-size: 22px;
-    line-height: 16px;
-    color: #ffffff;
-    padding: 8px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.files-table-row:hover {
-    background-color: #0d111f;
-    cursor: pointer;
-}
-
-.column-header {
-    font-size: 32px;
-    font-weight: bold;
-    line-height: 16px;
-    color: rgb(88, 199, 250);
-    text-align: center;
-    margin-bottom: 50px;
-    margin-top: 50px;
-}
-
-.column-create-date {
-    width: 30%;
-}
-
-.column-sum {
-    width: 20%;
-}
-
-.column-category {
-    width: 25%;
-}
-
-.column-action {
-    width: 25%;
-}
-
-.column-sumCreate {
-    width: 33%;
-}
-
-.column-categoryCreate {
-    width: 33%;
-}
-
-.column-actionCreate {
-    width: 33%;
-}
-
-.action-cell {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-}
-
-.pagination {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: auto;
-    gap: 10px;
-}
-
-.page-btn {
-    background-color: #007bff;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
-    border-radius: 4px;
-    font-size: 14px;
-    color: white;
-    transition: background-color 0.3s ease;
-}
-
-.page-btn:hover {
-    background-color: #0056b3;
-}
-
-.page-btn.active {
-    background-color: #004085;
-}
-
-.page-btn:focus {
+    flex: 1;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .create-transaction-sum-input:focus,
+  .create-transaction-category-select:focus {
     outline: none;
-}
-
-.errorCreateTransaction {
-    margin-top: 20px;
-    width: 90%;
+    border-color: var(--accent);
+    box-shadow: 0 0 5px var(--accent);
+  }
+  
+  .create-transaction-buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .create-transaction-button {
+    flex: 1;
+    background-color: var(--accent);
+    border: none;
+    color: #000;
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .create-transaction-button:hover {
+    background-color: var(--accent-hover);
+    box-shadow: 0 0 10px var(--accent);
+  }
+  /* Контейнер */
+.tt-container {
+    background-color: #1e1e2f;
+    color: #e0e0e0;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  /* Заголовок */
+  .tt-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  /* Таблиця */
+  .tt-table {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* Хедер таблиці */
+  .tt-table-header {
+    display: flex;
+    background-color: #2b2b3c;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  
+  /* Рядок таблиці */
+  .tt-table-row {
+    display: flex;
+    background-color: #29293d;
+    padding: 12px;
+    border-radius: 8px;
+    align-items: center;
+    transition: background 0.2s ease;
+  }
+  
+  .tt-table-row:hover {
+    background-color: #323248;
+  }
+  
+  /* Комірка таблиці */
+  .tt-cell,
+  .tt-column-header {
+    flex: 1;
+    padding: 4px 8px;
+  }
+  
+  /* Специфічні колонки */
+  .tt-col-date {
+    flex: 2;
+  }
+  
+  .tt-col-sum {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .tt-col-category {
+    flex: 2;
+  }
+  
+  .tt-col-action {
+    flex: 2;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+  
+  /* Введення та вибір */
+  .tt-input,
+  .tt-select {
+    width: 100%;
+    padding: 6px 10px;
+    background-color: #1a1a26;
+    color: #e0e0e0;
+    border: 1px solid #444;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+  }
+  
+  .tt-input:focus,
+  .tt-select:focus {
+    border-color: #6a5acd;
+    outline: none;
+  }
+  
+  /* Кнопки */
+  .tt-btn {
+    padding: 6px 14px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    color: white;
+  }
+  
+  .tt-save {
+    background-color: #4caf50;
+  }
+  
+  .tt-save:hover {
+    background-color: #43a047;
+  }
+  
+  .tt-edit {
+    background-color: #2196f3;
+  }
+  
+  .tt-edit:hover {
+    background-color: #1976d2;
+  }
+  
+  .tt-delete {
+    background-color: #f44336;
+  }
+  
+  .tt-delete:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Адаптивність */
+  @media (max-width: 768px) {
+    .tt-table-header,
+    .tt-table-row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .tt-col-action {
+      justify-content: flex-start;
+    }
+  
+    .tt-cell,
+    .tt-column-header {
+      width: 100%;
+    }
+  }
+  .tp-root {
+    padding: 32px;
+    background-color: #121212;
+    min-height: 100vh;
+    color: #e0e0e0;
+    font-family: "Segoe UI", sans-serif;
+  }
+  
+  .tp-main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .tp-form-section {
+    background-color: #1e1e2f;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  }
+  
+  .tp-data-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .tp-table-wrapper {
+    background-color: #1e1e2f;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  }
+  .pagination {
     display: flex;
     justify-content: center;
-}
+    align-items: center;
+    gap: 8px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+  }
+  
+  .page-btn {
+    background-color: #1e1e2f;
+    color: #ffffffcc;
+    border: 2px solid #00f2ff;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 6px #00f2ff66;
+  }
+  
+  .page-btn:hover {
+    background-color: #00f2ff;
+    color: #000;
+    box-shadow: 0 0 12px #00f2ffcc;
+  }
+  
+  .page-btn.active {
+    background-color: #00f2ff;
+    color: #000;
+    box-shadow: 0 0 16px #00f2ff;
+  }
+  
+  .page-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+  
+  .nav-btn {
+    font-size: 14px;
+    padding: 6px 14px;
+  }
+  

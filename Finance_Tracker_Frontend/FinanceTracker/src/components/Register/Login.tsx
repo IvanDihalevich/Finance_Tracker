@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../api/AuthContext";
-import "../../css/AuthTile.css";
+import styles from "../../css/Login.module.css";
 
 const Login: React.FC = () => {
   const [login, setLogin] = useState("");
@@ -18,35 +18,49 @@ const Login: React.FC = () => {
       if (success) {
         navigate("/transaction");
       } else {
-        setError("Failed to log in. Check your username or password.");
+        setError("Неправильний логін або пароль.");
       }
-    } catch (err) {
-      setError("Error signing in. Please try again later.");
+    } catch {
+      setError("Помилка під час входу.");
     }
   };
 
   return (
-    <div className="login-page">
-      <div className="form">
-        <form className="login-form" onSubmit={handleLogin}>
-          <input
-            type="text"
-            placeholder="Login"
-            value={login}
-            onChange={(e) => setLogin(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button type="submit">Login</button>
-          {error && <p style={{ color: "red" }}>{error}</p>}
-          <p className="message">
-          Not registered? <a href="/register">Create an account</a>
-          </p>
-        </form>
+    <div className={styles.wrapper}>
+      <div className={styles.ring}>
+        <i className={styles.ringLayer}></i>
+        <i className={styles.ringLayer}></i>
+        <i className={styles.ringLayer}></i>
+
+        <div className={styles.formContainer}>
+          <h2 className={styles.title}>Login</h2>
+          <form onSubmit={handleLogin}>
+            <div className={styles.inputGroup}>
+              <input
+                type="text"
+                placeholder="Username"
+                value={login}
+                onChange={(e) => setLogin(e.target.value)}
+              />
+            </div>
+            <div className={styles.inputGroup}>
+              <input
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+            <div className={styles.inputGroup}>
+              <input type="submit" value="Sign in" />
+            </div>
+            {error && <p className={styles.errorMessage}>{error}</p>}
+            <div className={styles.linkGroup}>
+              <a href="#">Забули пароль?</a>
+              <a href="/register">Зареєструватися</a>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import UserService from "../../api/services/UserService";
-import "../../css/AuthTile.css";
+import styles from "../../css/Login.module.css";
 
 const Register: React.FC = () => {
   const [login, setLogin] = useState("");
@@ -36,34 +36,50 @@ const Register: React.FC = () => {
   };
 
   return (
-    <div className="login-page">
-      <div className="form">
-        <form className="register-form" onSubmit={handleRegister}>
+    <div className={styles.registerContainer}>
+      <div className={styles.registerBackgroundSquares}>
+        <div className={styles.registerSquare}></div>
+        <div className={styles.registerSquare}></div>
+        <div className={styles.registerSquare}></div>
+        <div className={styles.registerSquare}></div>
+      </div>
+
+      <div className={styles.registerCard}>
+        <h2 className={styles.registerTitle}>Реєстрація</h2>
+        <form onSubmit={handleRegister} className={styles.registerForm}>
           <input
             type="text"
-            placeholder="Login"
+            placeholder="Логін"
             value={login}
             onChange={(e) => setLogin(e.target.value)}
+            className={styles.registerInput}
             required
           />
           <input
             type="password"
-            placeholder="Password"
+            placeholder="Пароль"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            className={styles.registerInput}
             required
           />
           <input
             type="password"
-            placeholder="Confirm Password"
+            placeholder="Підтвердження паролю"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
+            className={styles.registerInput}
             required
           />
-          <button type="submit">Create</button>
-          {error && <p style={{ color: "red" }}>{error}</p>}
-          <p className="message">
-            Already registered? <a href="/login">Sign In</a>
+
+          <button type="submit" className={styles.registerButton}>
+            Зареєструватися
+          </button>
+
+          {error && <p className={styles.registerError}>{error}</p>}
+
+          <p className={styles.registerSwitch}>
+            Вже маєте акаунт? <a href="/login">Увійти</a>
           </p>
         </form>
       </div>

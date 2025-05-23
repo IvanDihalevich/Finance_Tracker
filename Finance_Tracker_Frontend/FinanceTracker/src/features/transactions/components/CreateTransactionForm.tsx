@@ -18,9 +18,7 @@ const CreateTransactionForm: React.FC<Props> = ({
   fetchBalance,
 }) => {
   const { addNotification } = useNotification();
-  const [newTransactionCategoryId, setNewTransactionCategoryId] = useState<
-    string | null
-  >(null);
+  const [newTransactionCategoryId, setNewTransactionCategoryId] = useState<string | null>(null);
   const [newTransactionSum, setNewTransactionSum] = useState<string>("");
 
   const handleTransaction = async (isIncome: boolean) => {
@@ -72,30 +70,26 @@ const CreateTransactionForm: React.FC<Props> = ({
   };
 
   return (
-    <div className="AddBalance">
-      <div className="UperCreateBalance">
-        <div className="column-header table-cell column-sumCreate">Sum</div>
-        <div className="column-header table-cell column-categoryCreate">
-          Category
-        </div>
-        <div className="column-header table-cell column-actionCreate">
-          Action
-        </div>
+    <div className="create-transaction-container">
+      <div className="create-transaction-header">
+        <div className="create-transaction-sum-header">Sum</div>
+        <div className="create-transaction-category-header">Category</div>
+        <div className="create-transaction-action-header">Action</div>
       </div>
-      <div className="BottomCreateBalance">
+      <div className="create-transaction-form">
         <input
-          className="inputSumCreate"
+          className="create-transaction-sum-input"
           type="text"
           value={newTransactionSum}
           onChange={(e) => setNewTransactionSum(e.target.value)}
         />
         <select
-          className="SelectCategoryCreate"
+          className="create-transaction-category-select"
           value={newTransactionCategoryId || ""}
           onChange={(e) => setNewTransactionCategoryId(e.target.value)}
         >
           <option value="" disabled>
-          Choose a category
+            Choose a category
           </option>
           {categories.map((category) => (
             <option key={category.id} value={category.id}>
@@ -103,15 +97,15 @@ const CreateTransactionForm: React.FC<Props> = ({
             </option>
           ))}
         </select>
-        <div className="Buttondiv">
+        <div className="create-transaction-button-group">
           <button
-            className="ButtonTransactionCreate"
+            className="create-transaction-button"
             onClick={() => handleTransaction(true)}
           >
             Income
           </button>
           <button
-            className="ButtonTransactionCreate"
+            className="create-transaction-button"
             onClick={() => handleTransaction(false)}
           >
             Cost
