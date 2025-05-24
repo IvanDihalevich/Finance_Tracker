@@ -92,7 +92,7 @@
 
 .inputGroup input[type="text"],
 .inputGroup input[type="password"] {
-  width: 35vh;
+  width: 100%;
   padding: 12px 20px;
   border: none;
   outline: none;
@@ -102,7 +102,7 @@
 }
 
 .inputGroup input[type="submit"] {
-  width: 28vh;
+  width: 100%;
   padding: 12px;
   border: none;
   outline: none;

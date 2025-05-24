@@ -18,7 +18,7 @@
     padding: 2rem;
     border-radius: 16px;
     box-shadow: var(--shadow);
-    max-width: 600px;
+    max-width: 800px;
     margin: auto;
     font-family: 'Segoe UI', sans-serif;
   }
@@ -63,11 +63,23 @@
     border-color: var(--accent);
     box-shadow: 0 0 5px var(--accent);
   }
+  .create-transaction-button-group {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    margin-top: 0.5rem;
+  }
   
   .create-transaction-buttons {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     gap: 0.5rem;
+    margin-top: 1rem;
+    justify-content: flex-end;
   }
+  
   
   .create-transaction-button {
     flex: 1;

@@ -22,7 +22,6 @@ const TransactionFormToggle: React.FC<Props> = ({
       >
         Create a transactionasdasd
       </h1>
-   
     </div>
   );
 };

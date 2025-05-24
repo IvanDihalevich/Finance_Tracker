@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "../../../css/CategoryStatisticComponent.css";
 
 type Props = {
@@ -15,52 +15,38 @@ const CategoryStatisticSelectDate: React.FC<Props> = ({
   setEndDate,
 }) => {
   useEffect(() => {
-    const currentDate = new Date();
-    const startDate = new Date(currentDate);
-    const endDate = new Date(currentDate);
+    const now = new Date();
+    const start = new Date(now);
+    const end = new Date(now);
+    start.setFullYear(now.getFullYear() - 1);
+    end.setFullYear(now.getFullYear() + 1);
 
-    startDate.setFullYear(currentDate.getFullYear() - 1);
-    endDate.setFullYear(currentDate.getFullYear() + 1);
-
-    const formattedStartDate = startDate.toISOString().split("T")[0];
-    const formattedEndDate = endDate.toISOString().split("T")[0];
-
-    setStartDate(formattedStartDate);
-    setEndDate(formattedEndDate);
+    setStartDate(start.toISOString().split("T")[0]);
+    setEndDate(end.toISOString().split("T")[0]);
   }, []);
 
-  const handleStartDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setStartDate(e.target.value);
-  };
-
-  const handleEndDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEndDate(e.target.value);
-  };
-
   return (
-    <div className="date-selector">
-      <label className="rowDate">
-        <span>Start Date:</span>
-        <span className="date-wrapper">
-          <input
-            type="date"
-            name="start-date"
-            value={startDate}
-            onChange={handleStartDateChange}
-          />
-        </span>
-      </label>
-      <label className="rowDate">
-        <span>End Date:</span>
-        <span className="date-wrapper">
-          <input
-            type="date"
-            name="end-date"
-            value={endDate}
-            onChange={handleEndDateChange}
-          />
-        </span>
-      </label>
+    <div className="category-date-panel">
+      <div className="category-date-field">
+        <label htmlFor="start-date">Start Date:</label>
+        <input
+          id="start-date"
+          className="category-date-input"
+          type="date"
+          value={startDate}
+          onChange={(e) => setStartDate(e.target.value)}
+        />
+      </div>
+      <div className="category-date-field">
+        <label htmlFor="end-date">End Date:</label>
+        <input
+          id="end-date"
+          className="category-date-input"
+          type="date"
+          value={endDate}
+          onChange={(e) => setEndDate(e.target.value)}
+        />
+      </div>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../../css/CategoryStatisticComponent.css";
 import { StatisticCategoryDto } from "../../../api/dto/StatisticDto";
 
@@ -6,48 +6,58 @@ type Props = {
   statisticsForAllCategories: StatisticCategoryDto[];
 };
 
-const CategoryStatisticCard: React.FC<Props> = ({
-  statisticsForAllCategories,
-}) => {
+const CategoryStatisticCard: React.FC<Props> = ({ statisticsForAllCategories }) => {
+  const [selectedCategory, setSelectedCategory] = useState<StatisticCategoryDto | null>(null);
+
+  const handleCategoryClick = (category: StatisticCategoryDto) => {
+    setSelectedCategory(category);
+  };
+
   return (
-    <div className="Container_Category">
-      <h1 className="TopName_Category">Category: </h1>
-      <div className="Card_Category">
+    <div className="category-stat-layout">
+      <div className="category-list">
         {statisticsForAllCategories.map((category) => (
           <div
             key={category.name}
-            className={
-              category.plusSum >= category.minusSum
-                ? "card_Category CardPlus_Category"
-                : "card_Category CardMinus_Category"
-            }
+            className={`category-item ${selectedCategory?.name === category.name ? "active" : ""}`}
+            onClick={() => handleCategoryClick(category)}
           >
-            <div className="StatisticCard_Category">
-              <div className="StatisticName_Category">{category.name}</div>
-              <div className="RowStatistic">
-                <div>
-                Income:
-                  <div>
-                    <span className="SumPlus_Category">
-                      +{category.plusSum.toLocaleString()} $
-                    </span>
-                  </div>
-                </div>
-                <div>
-                Spending:
-                  <div>
-                    <span className="SumMinus_Category">
-                      {category.minusSum.toLocaleString()} $
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div>Transaction: {category.countTransaction}</div>
-            </div>
+            {category.name}
           </div>
         ))}
+      </div>
+
+      <div className="category-detail">
+        {selectedCategory ? (
+          <>
+            <h2>{selectedCategory.name}</h2>
+            <div className="detail-row">
+              <span>💵 Income:</span>
+              <span className="income">+{selectedCategory.plusSum.toLocaleString()} $</span>
+            </div>
+            <div className="detail-row">
+              <span>📉 Spending:</span>
+              <span className="spending">{selectedCategory.minusSum.toLocaleString()} $</span>
+            </div>
+            <div className="detail-row">
+              <span>💳 Transactions:</span>
+              <span>{selectedCategory.countTransaction}</span>
+            </div>
+            <div className="detail-row">
+              <span>📊 Avg:</span>
+              <span>
+                +{(selectedCategory.plusSum / selectedCategory.countTransaction || 0).toFixed(2)} / -
+                {(selectedCategory.minusSum / selectedCategory.countTransaction || 0).toFixed(2)} $
+              </span>
+            </div>
+
+          </>
+        ) : (
+          <div className="placeholder">Оберіть категорію для перегляду деталей</div>
+        )}
       </div>
     </div>
   );
 };
+
 export default CategoryStatisticCard;
