@@ -199,7 +199,6 @@ const StatisticPage: React.FC = () => {
         handleFormToggle={handleFormToggle}
       />
       <StatisticCard
-        activeForm={activeForm}
         transactions={transactions}
         categories={categories}
         statisticsForAllCategories={statisticsByTimeAndCategory}

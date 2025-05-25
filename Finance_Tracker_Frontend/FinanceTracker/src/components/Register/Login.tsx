@@ -18,10 +18,10 @@ const Login: React.FC = () => {
       if (success) {
         navigate("/transaction");
       } else {
-        setError("Неправильний логін або пароль.");
+        setError("Incorrect login or password.");
       }
     } catch {
-      setError("Помилка під час входу.");
+      setError("Error while logging in. Please try again.");
     }
   };
 
@@ -56,8 +56,8 @@ const Login: React.FC = () => {
             </div>
             {error && <p className={styles.errorMessage}>{error}</p>}
             <div className={styles.linkGroup}>
-              <a href="#">Забули пароль?</a>
-              <a href="/register">Зареєструватися</a>
+              <a href="#">Forgot your password?</a>
+              <a href="/register">Sign up</a>
             </div>
           </form>
         </div>

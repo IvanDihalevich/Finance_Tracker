@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import "../../../css/Transaction.css";
 
 type Props = {
@@ -27,3 +27,4 @@ const TransactionFormToggle: React.FC<Props> = ({
 };
 
 export default TransactionFormToggle;
+*/

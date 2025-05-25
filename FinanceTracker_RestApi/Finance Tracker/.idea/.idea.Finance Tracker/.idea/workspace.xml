@@ -9,9 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a78d2840-5a5f-4798-acff-0f5582527aca" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/features/transactions/components/TransactionFormToggle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../Finance_Tracker_Frontend/FinanceTracker/src/features/transactions/components/TransactionFormToggle.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="a78d2840-5a5f-4798-acff-0f5582527aca" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -126,6 +124,7 @@
       <workItem from="1747942680856" duration="2807000" />
       <workItem from="1748012341926" duration="1275000" />
       <workItem from="1748113335705" duration="1622000" />
+      <workItem from="1748191407788" duration="1110000" />
     </task>
     <servers />
   </component>

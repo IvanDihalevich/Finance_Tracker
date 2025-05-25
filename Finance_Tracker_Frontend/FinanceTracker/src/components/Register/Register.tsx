@@ -14,7 +14,7 @@ const Register: React.FC = () => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
-      setError("Паролі не співпадають");
+      setError("Passwords do not match.");
       return;
     }
 
@@ -25,12 +25,12 @@ const Register: React.FC = () => {
       if (err instanceof Error) {
         const axiosError = err as any;
         if (axiosError.response && axiosError.response.status === 409) {
-          setError("Користувач вже існує.");
+          setError("User already exists.");
         } else {
-          setError("Не вдалося зареєструватися. Спробуйте ще раз.");
+          setError("Failed to register. Please try again.");
         }
       } else {
-        setError("Невідома помилка.");
+        setError("Unknown error. Please try again.");
       }
     }
   };
@@ -45,11 +45,11 @@ const Register: React.FC = () => {
       </div>
 
       <div className={styles.registerCard}>
-        <h2 className={styles.registerTitle}>Реєстрація</h2>
+        <h2 className={styles.registerTitle}>Registration</h2>
         <form onSubmit={handleRegister} className={styles.registerForm}>
           <input
             type="text"
-            placeholder="Логін"
+            placeholder="Login"
             value={login}
             onChange={(e) => setLogin(e.target.value)}
             className={styles.registerInput}
@@ -57,7 +57,7 @@ const Register: React.FC = () => {
           />
           <input
             type="password"
-            placeholder="Пароль"
+            placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className={styles.registerInput}
@@ -65,7 +65,7 @@ const Register: React.FC = () => {
           />
           <input
             type="password"
-            placeholder="Підтвердження паролю"
+            placeholder="Password confirm"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
             className={styles.registerInput}
@@ -73,13 +73,13 @@ const Register: React.FC = () => {
           />
 
           <button type="submit" className={styles.registerButton}>
-            Зареєструватися
+          Sign up
           </button>
 
           {error && <p className={styles.registerError}>{error}</p>}
 
           <p className={styles.registerSwitch}>
-            Вже маєте акаунт? <a href="/login">Увійти</a>
+          Already have an account? <a href="/login">Login</a>
           </p>
         </form>
       </div>

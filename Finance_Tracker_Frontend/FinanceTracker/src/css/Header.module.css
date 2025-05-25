@@ -5,7 +5,7 @@
 }
 
 .headerDarkContainer {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -14,7 +14,7 @@
 }
 
 .headerDarkLogo {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #ffffff;
   font-weight: bold;
   letter-spacing: 1px;
@@ -29,9 +29,9 @@
 
 .headerDarkNavItems li a,
 .headerDarkAuthLinks li a {
-  color: #cccccc;
+  color: #e9e1e1;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 1.5rem;
   transition: color 0.3s ease;
 }
 

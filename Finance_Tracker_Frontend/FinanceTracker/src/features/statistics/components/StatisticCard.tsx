@@ -6,7 +6,6 @@ import { CategoryDto } from "../../../api/dto/CategoryDto";
 import { StatisticDto } from "../../../api/dto/StatisticDto";
 
 type Props = {
-  activeForm: string;
   transactions: TransactionDto[];
   categories: CategoryDto[];
   statisticsForAllCategories: StatisticDto;
@@ -19,7 +18,6 @@ type Props = {
 };
 
 const StatisticCard: React.FC<Props> = ({
-  activeForm,
   transactions,
   categories,
   statisticsForAllCategories,
@@ -30,36 +28,34 @@ const StatisticCard: React.FC<Props> = ({
   setTransactions,
   fetchBalance,
 }) => (
-  <div className="CardContainer">
-    <div
-      className={`CardPlus ${activeForm === "CardPlusActive" ? "active" : ""}`}
-    >
-      <div className="StatisticCard">
-        <div>
-          <h1 className="SumPlus2">Income:</h1>
-          <h1 className="SumPlus">
-            {statisticsForAllCategories !== null
-              ? `${statisticsForAllCategories.plusSum.toLocaleString()}$`
-              : "N/A"}
-          </h1>
+  <div className="stat-card-wrapper">
+    <div className="stat-card-container">
+      <div className="stat-card-plus">
+        <div className="stat-summary-card">
+          <div>
+            <h1 className="stat-sum-plus-label">Income:</h1>
+            <h1 className="stat-sum-plus-value">
+              {statisticsForAllCategories
+                ? `${statisticsForAllCategories.plusSum.toLocaleString()}$`
+                : "N/A"}
+            </h1>
+          </div>
+          <div>
+            <h1 className="stat-sum-plus-sub">
+              {statisticsForAllCategories
+                ? `Транзакцій: ${statisticsForAllCategories.plusCountTransaction}`
+                : "N/A"}
+            </h1>
+          </div>
+          <div>
+            <h1 className="stat-sum-plus-sub">
+              {statisticsForAllCategories
+                ? `Категорій: ${statisticsForAllCategories.plusCountCategory}`
+                : "N/A"}
+            </h1>
+          </div>
         </div>
-        <div>
-          <h1 className="SumPlusSecond">
-            {statisticsForAllCategories !== null
-              ? `Транзакції: ${statisticsForAllCategories.plusCountTransaction}`
-              : "N/A"}
-          </h1>
-        </div>
-        <div>
-          <h1 className="SumPlusSecond">
-            {statisticsForAllCategories !== null
-              ? `Категорій: ${statisticsForAllCategories.plusCountCategory}`
-              : "N/A"}
-          </h1>
-        </div>
-      </div>
-      <div className="StatisticTablePlus">
-        {activeForm === "CardPlusActive" && (
+        <div className="stat-table-plus">
           <TransactionTable
             transactions={transactions}
             categories={categories}
@@ -70,40 +66,36 @@ const StatisticCard: React.FC<Props> = ({
             setTransactions={setTransactions}
             fetchBalance={fetchBalance}
           />
-        )}
-      </div>
-    </div>
-    <div
-      className={`CardMinus ${
-        activeForm === "CardMinusActive" ? "active" : ""
-      }`}
-    >
-      <div className="StatisticCard">
-        <div>
-          <h1 className="SumMinus2">Spending:</h1>
-          <h1 className="SumMinus">
-            {statisticsForAllCategories !== null
-              ? `${statisticsForAllCategories.minusSum.toLocaleString()}$`
-              : "N/A"}
-          </h1>
-        </div>
-        <div>
-          <h1 className="SumMinusSecond">
-            {statisticsForAllCategories !== null
-              ? `Транзакції: ${statisticsForAllCategories.minusCountTransaction}`
-              : "N/A"}
-          </h1>
-        </div>
-        <div>
-          <h1 className="SumMinusSecond">
-            {statisticsForAllCategories !== null
-              ? `Категорій: ${statisticsForAllCategories.minusCountCategory}`
-              : "N/A"}
-          </h1>
         </div>
       </div>
-      <div className="StatisticTableMinus">
-        {activeForm === "CardMinusActive" && (
+
+      {/* Spending Card */}
+      <div className="stat-card-minus">
+        <div className="stat-summary-card">
+          <div>
+            <h1 className="stat-sum-minus-label">Spending:</h1>
+            <h1 className="stat-sum-minus-value">
+              {statisticsForAllCategories
+                ? `${statisticsForAllCategories.minusSum.toLocaleString()}$`
+                : "N/A"}
+            </h1>
+          </div>
+          <div>
+            <h1 className="stat-sum-minus-sub">
+              {statisticsForAllCategories
+                ? `Транзакцій: ${statisticsForAllCategories.minusCountTransaction}`
+                : "N/A"}
+            </h1>
+          </div>
+          <div>
+            <h1 className="stat-sum-minus-sub">
+              {statisticsForAllCategories
+                ? `Категорій: ${statisticsForAllCategories.minusCountCategory}`
+                : "N/A"}
+            </h1>
+          </div>
+        </div>
+        <div className="stat-table-minus">
           <TransactionTable
             transactions={transactions}
             categories={categories}
@@ -114,9 +106,10 @@ const StatisticCard: React.FC<Props> = ({
             setTransactions={setTransactions}
             fetchBalance={fetchBalance}
           />
-        )}
+        </div>
       </div>
     </div>
   </div>
 );
+
 export default StatisticCard;

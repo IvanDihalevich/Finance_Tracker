@@ -25,14 +25,14 @@ const StatisticSelectDate: React.FC<Props> = ({
 
   useEffect(() => {
     const currentDate = new Date();
-    const startDate = new Date(currentDate);
-    const endDate = new Date(currentDate);
+    const start = new Date(currentDate);
+    const end = new Date(currentDate);
 
-    startDate.setFullYear(currentDate.getFullYear() - 1);
-    endDate.setFullYear(currentDate.getFullYear() + 1);
+    start.setFullYear(currentDate.getFullYear() - 1);
+    end.setFullYear(currentDate.getFullYear() + 1);
 
-    setStartDate(startDate.toISOString().split("T")[0]);
-    setEndDate(endDate.toISOString().split("T")[0]);
+    setStartDate(start.toISOString().split("T")[0]);
+    setEndDate(end.toISOString().split("T")[0]);
   }, [setStartDate, setEndDate]);
 
   const handleStartDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -54,10 +54,10 @@ const StatisticSelectDate: React.FC<Props> = ({
   }, [startDate, endDate, selectedCategory]);
 
   return (
-    <div className="date-selector">
-      <label className="rowDate">
+    <div className="stat-select-container">
+      <label className="stat-select-row">
         <span>Start Date:</span>
-        <span className="date-wrapper">
+        <span className="stat-select-input-wrapper">
           <input
             type="date"
             name="start-date"
@@ -66,9 +66,9 @@ const StatisticSelectDate: React.FC<Props> = ({
           />
         </span>
       </label>
-      <label className="rowDate">
+      <label className="stat-select-row">
         <span>End Date:</span>
-        <span className="date-wrapper">
+        <span className="stat-select-input-wrapper">
           <input
             type="date"
             name="end-date"
@@ -77,11 +77,11 @@ const StatisticSelectDate: React.FC<Props> = ({
           />
         </span>
       </label>
-      <label className="rowDate">
+      <label className="stat-select-row">
         <span>Category:</span>
-        <span className="date-wrapper">
+        <span className="stat-select-input-wrapper">
           <select
-            className="statistic-selector"
+            className="stat-select-dropdown"
             value={selectedCategory}
             onChange={handleCategoryChange}
           >
