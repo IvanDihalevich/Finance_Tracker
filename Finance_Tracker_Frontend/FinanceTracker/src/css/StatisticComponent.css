@@ -145,4 +145,17 @@
     background-repeat: no-repeat;
     padding-right: 24px;
   }
+  .stat-cards-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .stat-cards-row {
+      flex-direction: column;
+    }
+  }
   

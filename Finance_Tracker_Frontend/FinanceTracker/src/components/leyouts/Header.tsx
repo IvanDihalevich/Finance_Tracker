@@ -10,11 +10,11 @@ const Header: React.FC = () => {
   const getHeaderTitle = () => {
     switch (location.pathname) {
       case "/transaction":
-        return "Your Transactions";
+        return "Transactions Page";
       case "/statistic":
-        return "Your Statistics";
+        return "Statistics Page";
       case "/category":
-        return "Category Overview";
+        return "Category Page";
       default:
         return "Welcome to FinanceTracker";
     }

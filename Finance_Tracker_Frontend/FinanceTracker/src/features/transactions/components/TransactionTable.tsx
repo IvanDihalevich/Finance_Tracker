@@ -2,7 +2,6 @@ import React, { useState, useCallback } from "react";
 import { TransactionDto } from "../../../api/dto/TransactionDto";
 import { CategoryDto } from "../../../api/dto/CategoryDto";
 import "../../../css/Transaction.css";
-
 import Pagination from "../../../components/Pagination";
 import TransactionService from "../../../api/services/TransactionService";
 import { useNotification } from "../../../components/notification/NotificationProvider";
@@ -43,7 +42,7 @@ const TransactionTable: React.FC<Props> = ({
         await TransactionService.delete(transactionId);
         const updatedTransactions = transactions.filter(
           (transaction) => transaction.id !== transactionId
-        );
+        );  
         setTransactions(updatedTransactions);
         fetchBalance();
         addNotification("The transaction was successfully deleted.", "success");

@@ -6,6 +6,8 @@ import { CategoryDto } from "../../../api/dto/CategoryDto";
 import { StatisticDto } from "../../../api/dto/StatisticDto";
 
 type Props = {
+  type: "plus" | "minus";
+  title: string;
   transactions: TransactionDto[];
   categories: CategoryDto[];
   statisticsForAllCategories: StatisticDto;
@@ -18,6 +20,8 @@ type Props = {
 };
 
 const StatisticCard: React.FC<Props> = ({
+  type,
+  title,
   transactions,
   categories,
   statisticsForAllCategories,
@@ -27,75 +31,49 @@ const StatisticCard: React.FC<Props> = ({
   handlePageChange,
   setTransactions,
   fetchBalance,
-}) => (
-  <div className="stat-card-wrapper">
-    <div className="stat-card-container">
-      <div className="stat-card-plus">
-        <div className="stat-summary-card">
-          <div>
-            <h1 className="stat-sum-plus-label">Income:</h1>
-            <h1 className="stat-sum-plus-value">
-              {statisticsForAllCategories
-                ? `${statisticsForAllCategories.plusSum.toLocaleString()}$`
-                : "N/A"}
-            </h1>
-          </div>
-          <div>
-            <h1 className="stat-sum-plus-sub">
-              {statisticsForAllCategories
-                ? `Транзакцій: ${statisticsForAllCategories.plusCountTransaction}`
-                : "N/A"}
-            </h1>
-          </div>
-          <div>
-            <h1 className="stat-sum-plus-sub">
-              {statisticsForAllCategories
-                ? `Категорій: ${statisticsForAllCategories.plusCountCategory}`
-                : "N/A"}
-            </h1>
-          </div>
-        </div>
-        <div className="stat-table-plus">
-          <TransactionTable
-            transactions={transactions}
-            categories={categories}
-            currentPage={currentPage}
-            totalPages={totalPages}
-            itemsPerPage={itemsPerPage}
-            handlePageChange={handlePageChange}
-            setTransactions={setTransactions}
-            fetchBalance={fetchBalance}
-          />
-        </div>
-      </div>
+}) => {
+  const isPlus = type === "plus";
 
-      {/* Spending Card */}
-      <div className="stat-card-minus">
+  const sum = isPlus
+    ? statisticsForAllCategories.plusSum
+    : statisticsForAllCategories.minusSum;
+
+  const countTransactions = isPlus
+    ? statisticsForAllCategories.plusCountTransaction
+    : statisticsForAllCategories.minusCountTransaction;
+
+  const countCategories = isPlus
+    ? statisticsForAllCategories.plusCountCategory
+    : statisticsForAllCategories.minusCountCategory;
+
+  const wrapperClass = isPlus ? "stat-card-plus" : "stat-card-minus";
+  const labelClass = isPlus ? "stat-sum-plus-label" : "stat-sum-minus-label";
+  const valueClass = isPlus ? "stat-sum-plus-value" : "stat-sum-minus-value";
+  const subClass = isPlus ? "stat-sum-plus-sub" : "stat-sum-minus-sub";
+  const tableClass = isPlus ? "stat-table-plus" : "stat-table-minus";
+
+  return (
+    <div className={`stat-card-container ${wrapperClass}`}>
+
         <div className="stat-summary-card">
           <div>
-            <h1 className="stat-sum-minus-label">Spending:</h1>
-            <h1 className="stat-sum-minus-value">
-              {statisticsForAllCategories
-                ? `${statisticsForAllCategories.minusSum.toLocaleString()}$`
-                : "N/A"}
+            <h1 className={labelClass}>{title}:</h1>
+            <h1 className={valueClass}>
+              {sum !== undefined ? `${sum.toLocaleString()}$` : "N/A"}
             </h1>
           </div>
           <div>
-            <h1 className="stat-sum-minus-sub">
-              {statisticsForAllCategories
-                ? `Транзакцій: ${statisticsForAllCategories.minusCountTransaction}`
-                : "N/A"}
+            <h1 className={subClass}>
+              Транзакцій: {countTransactions !== undefined ? countTransactions : "N/A"}
             </h1>
           </div>
           <div>
-            <h1 className="stat-sum-minus-sub">
-              {statisticsForAllCategories
-                ? `Категорій: ${statisticsForAllCategories.minusCountCategory}`
-                : "N/A"}
+            <h1 className={subClass}>
+              Категорій: {countCategories !== undefined ? countCategories : "N/A"}
             </h1>
           </div>
         </div>
-        <div className="stat-table-minus">
+        <div className={tableClass}>
           <TransactionTable
             transactions={transactions}
             categories={categories}
@@ -108,8 +86,7 @@ const StatisticCard: React.FC<Props> = ({
           />
         </div>
       </div>
-    </div>
-  </div>
-);
+  );
+};
 
 export default StatisticCard;
