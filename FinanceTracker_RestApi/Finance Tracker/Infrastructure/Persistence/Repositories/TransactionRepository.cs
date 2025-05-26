@@ -47,7 +47,7 @@ public class TransactionRepository(ApplicationDbContext context) : ITransactionR
     {
         var entity = await context.Transactions
             .Include(t => t.Category)
-            .AsNoTracking()
+            
             .FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
 
         return entity == null ? Option.None<Transaction>() : Option.Some(entity);
