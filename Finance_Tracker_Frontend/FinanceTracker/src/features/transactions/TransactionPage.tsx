@@ -1,27 +1,20 @@
 import React, { useState, useEffect, useMemo, useCallback } from "react";
-import TransactionFormToggle from "./components/TransactionFormToggle";
 import CreateTransactionForm from "./components/CreateTransactionForm";
-import BankTransactionForm from "./components/BankTransactionForm";
 import TransactionTable from "./components/TransactionTable";
 import BalanceDisplay from "./components/BalanceDisplay";
 import TransactionService from "../../api/services/TransactionService";
 import CategoryService from "../../api/services/CategoryService";
 import UserService from "../../api/services/UserService";
-import BankService from "../../api/services/BankService";
 import { TransactionDto } from "../../api/dto/TransactionDto";
 import { CategoryDto } from "../../api/dto/CategoryDto";
-import { BankDto } from "../../api/dto/BankDto";
 import "../../css/Transaction.css";
 import LoadingIndicator from "../../components/loading/LoadingIndicator";
 
 const TransactionPage: React.FC = () => {
   const [transactions, setTransactions] = useState<TransactionDto[]>([]);
   const [categories, setCategories] = useState<CategoryDto[]>([]);
-  const [banks, setBanks] = useState<BankDto[]>([]);
   const [balance, setBalance] = useState<number>(0);
   const [loading, setLoading] = useState(false);
-
-  const [activeForm, setActiveForm] = useState("createTransaction");
 
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
@@ -72,18 +65,6 @@ const TransactionPage: React.FC = () => {
     }
   }, []);
 
-  const fetchBanks = useCallback(async () => {
-    setLoading(true);
-    try {
-      const banksData = await BankService.getAllBanksByUser();
-      setBanks(banksData);
-    } catch (error) {
-      console.error("Failed to fetch banks", error);
-    } finally {
-      setLoading(false);
-    }
-  }, []);
-
   useEffect(() => {
     fetchBalance();
     fetchTransactions();
@@ -91,43 +72,29 @@ const TransactionPage: React.FC = () => {
 
   useEffect(() => {
     fetchCategories();
-    fetchBanks();
-  }, [fetchCategories, fetchBanks]);
+  }, [fetchCategories]);
 
   const memoizedTransactions = useMemo(() => transactions, [transactions]);
   const memoizedCategories = useMemo(() => categories, [categories]);
-  const memoizedBanks = useMemo(() => banks, [banks]);
 
   const handlePageChange = (page: number) => setCurrentPage(page);
 
   return (
-    <div>
-      <div className="MainContainerTransaction">
-        <div className="AddBalance">
-          <TransactionFormToggle
-            activeForm={activeForm}
-            setActiveForm={setActiveForm}
+    <div className="tp-root">
+      <div className="tp-main-container">
+        <div className="tp-form-section">
+          <CreateTransactionForm
+            categories={memoizedCategories}
+            balance={balance}
+            fetchTransactions={fetchTransactions}
+            fetchBalance={fetchBalance}
           />
-          {activeForm === "createTransaction" ? (
-            <CreateTransactionForm
-              categories={memoizedCategories}
-              balance={balance}
-              fetchTransactions={fetchTransactions}
-              fetchBalance={fetchBalance}
-            />
-          ) : (
-            <BankTransactionForm
-              banks={memoizedBanks}
-              balance={balance}
-              fetchBalance={fetchBalance}
-              fetchBanks={fetchBanks}
-            />
-          )}
         </div>
+
         {loading && <LoadingIndicator />}
 
-        <div className="containerTransaction">
-          <div className="TableDiv">
+        <div className="tp-data-section">
+          <div className="tp-table-wrapper">
             <TransactionTable
               transactions={memoizedTransactions}
               categories={memoizedCategories}

@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import "../../../css/Transaction.css";
 
 type Props = {
@@ -11,7 +11,6 @@ const TransactionFormToggle: React.FC<Props> = ({
   setActiveForm,
 }) => {
   const handleCreateTransaction = () => setActiveForm("createTransaction");
-  const handleInteractionWithBank = () => setActiveForm("interactionWithBank");
 
   return (
     <div className="TranasctionNameDiv">
@@ -21,18 +20,11 @@ const TransactionFormToggle: React.FC<Props> = ({
         }`}
         onClick={handleCreateTransaction}
       >
-        Створити транзакцію
-      </h1>
-      <h1
-        className={`TransactionName ${
-          activeForm === "interactionWithBank" ? "active" : ""
-        }`}
-        onClick={handleInteractionWithBank}
-      >
-        Взаємодія з банкою
+        Create a transactionasdasd
       </h1>
     </div>
   );
 };
 
 export default TransactionFormToggle;
+*/

@@ -36,18 +36,23 @@ const CategoryStatisticPage: React.FC = () => {
   }, [startDate, endDate, fetchStatisticsForAllCategories]);
 
   return (
-    <div className="Main">
-      <StatisticSelectDate
-        startDate={startDate}
-        endDate={endDate}
-        setStartDate={setStartDate}
-        setEndDate={setEndDate}
-      />
+    <div className="category-statistic-container">
+      <div className="date-picker-wrapper">
+        <StatisticSelectDate
+          startDate={startDate}
+          endDate={endDate}
+          setStartDate={setStartDate}
+          setEndDate={setEndDate}
+        />
+      </div>
+
       {loading && <LoadingIndicator />}
 
-      <CategoryStatisticCard
-        statisticsForAllCategories={statisticsForAllCategories}
-      />
+      <div className="statistic-content">
+        <CategoryStatisticCard
+          statisticsForAllCategories={statisticsForAllCategories}
+        />
+      </div>
     </div>
   );
 };

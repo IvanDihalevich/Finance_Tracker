@@ -16,7 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DpaMonitoringSettings">
-    <option name="firstShow" value="false" />
+    <option name="autoShow" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -30,7 +30,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/IvanDihalevich/Finance_Tracker.git&quot;,
-    &quot;accountId&quot;: &quot;00c47db5-354d-4506-bd93-eb2dffcab195&quot;
+    &quot;accountId&quot;: &quot;9cb34d93-5fee-4913-9372-de1ed566bbaf&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -47,7 +47,7 @@
     &quot;.NET Launch Settings Profile.Api: IIS Express.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;backend&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;frontend&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -120,6 +120,13 @@
       <workItem from="1747777267421" duration="116000" />
       <workItem from="1747777398834" duration="1520000" />
       <workItem from="1747854138236" duration="4491000" />
+      <workItem from="1747863237783" duration="1148000" />
+      <workItem from="1747942680856" duration="2807000" />
+      <workItem from="1748012341926" duration="1275000" />
+      <workItem from="1748113335705" duration="1622000" />
+      <workItem from="1748191407788" duration="1110000" />
+      <workItem from="1748297219927" duration="20000" />
+      <workItem from="1748298764700" duration="779000" />
     </task>
     <servers />
   </component>

@@ -1,29 +1,20 @@
-import "../../css/Footer.css";
+import styles from "../../css/Footer.module.css";
 
 const Footer = () => {
   return (
-    <footer className="site-footer">
-      <div className="container">
-        <div className="row">
-          <div className="col-sm-12 col-md-6">
-            <h6>About</h6>
-            <p className="text-justify">
-              FinanceTracker.com — створений для людей, які прагнуть ефективно
-              керувати своїми фінансами та отримувати повну статистику щодо
-              доходів і витрат. Проєкт розроблено студентом факультету
-              комп’ютерних наук Національного університету «Острозька академія».
-            </p>
-          </div>
+    <footer className={styles.footer}>
+      <div className={styles.footerDarkContainer}>
+        <div className={styles.footerDarkContent}>
+          <h6>About</h6>
+          <p>
+            FinanceTracker.com — платформа для ефективного управління фінансами,
+            створена студентами факультету комп’ютерних наук НУОА.
+          </p>
         </div>
-      </div>
-      <div className="container">
-        <div className="row">
-          <div>
-            <p className="copyright-text">
-              Copyright &copy; 2024 Всі права належать
-              <a href="#"> Тарасюку Дмитру</a>.
-            </p>
-          </div>
+        <div className={styles.footerDarkBottom}>
+          <p>
+            © 2025 Всі права захищені. Дігалевич Іван та Максим Кошин.
+          </p>
         </div>
       </div>
     </footer>

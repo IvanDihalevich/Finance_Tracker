@@ -3,9 +3,17 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>796</IntrospectionStateNumber>
-      <ServerVersion>17.5</ServerVersion>
-      <StartupTime>1747855555</StartupTime>
+      <Grants>1||-9223372036854775808|c|G
+1||10|c|G
+1||10|C|G
+1||10|T|G
+4||-9223372036854775808|c|G
+4||10|c|G
+4||10|C|G
+4||10|T|G</Grants>
+      <IntrospectionStateNumber>976</IntrospectionStateNumber>
+      <ServerVersion>17.4</ServerVersion>
+      <StartupTime>1748298967</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -132,7 +140,6 @@ true America/Ciudad_Juarez
 false America/Coral_Harbour
 false America/Cordoba
 false America/Costa_Rica
-false America/Coyhaique
 false America/Creston
 false America/Cuiaba
 false America/Curacao
@@ -888,7 +895,6 @@ true posix/America/Ciudad_Juarez
 false posix/America/Coral_Harbour
 false posix/America/Cordoba
 false posix/America/Costa_Rica
-false posix/America/Coyhaique
 false posix/America/Creston
 false posix/America/Cuiaba
 false posix/America/Curacao
@@ -1401,7 +1407,7 @@ true posixrules
 13219||10|C|G
 13219||-9223372036854775808|U|G
 13219||10|U|G</Grants>
-      <IntrospectionStateNumber>796</IntrospectionStateNumber>
+      <IntrospectionStateNumber>976</IntrospectionStateNumber>
       <ObjectId>16388</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4828,55 +4834,55 @@ true posixrules
     <schema id="265" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>796</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2025-05-21.20:06:53</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>976</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2025-05-26.22:36:16</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>532</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
     <table id="266" parent="265" name="__EFMigrationsHistory">
-      <ObjectId>16521</ObjectId>
-      <StateNumber>791</StateNumber>
+      <ObjectId>16389</ObjectId>
+      <StateNumber>751</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="267" parent="265" name="categorys">
-      <ObjectId>16526</ObjectId>
-      <StateNumber>792</StateNumber>
+      <ObjectId>16394</ObjectId>
+      <StateNumber>752</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="268" parent="265" name="transactions">
-      <ObjectId>16540</ObjectId>
-      <StateNumber>792</StateNumber>
+      <ObjectId>16408</ObjectId>
+      <StateNumber>752</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="269" parent="265" name="users">
-      <ObjectId>16531</ObjectId>
-      <StateNumber>792</StateNumber>
+      <ObjectId>16399</ObjectId>
+      <StateNumber>752</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <column id="270" parent="266" name="migration_id">
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>791</StateNumber>
+      <StateNumber>751</StateNumber>
       <StoredType>varchar(150)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="271" parent="266" name="product_version">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>791</StateNumber>
+      <StateNumber>751</StateNumber>
       <StoredType>varchar(32)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <index id="272" parent="266" name="pk___ef_migrations_history">
       <ColNames>migration_id</ColNames>
-      <ObjectId>16524</ObjectId>
+      <ObjectId>16392</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>791</StateNumber>
+      <StateNumber>751</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
       <CollationNames>default</CollationNames>
@@ -4884,43 +4890,43 @@ true posixrules
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
     <key id="273" parent="266" name="pk___ef_migrations_history">
-      <ObjectId>16525</ObjectId>
+      <ObjectId>16393</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>791</StateNumber>
-      <UnderlyingIndexId>16524</UnderlyingIndexId>
+      <StateNumber>751</StateNumber>
+      <UnderlyingIndexId>16392</UnderlyingIndexId>
     </key>
     <column id="274" parent="267" name="id">
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>792</StateNumber>
+      <StateNumber>752</StateNumber>
       <StoredType>uuid|0s</StoredType>
       <TypeId>2950</TypeId>
     </column>
     <column id="275" parent="267" name="name">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>792</StateNumber>
+      <StateNumber>752</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <index id="276" parent="267" name="pk_categorys">
       <ColNames>id</ColNames>
-      <ObjectId>16529</ObjectId>
+      <ObjectId>16397</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>792</StateNumber>
+      <StateNumber>752</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="277" parent="267" name="pk_categorys">
-      <ObjectId>16530</ObjectId>
+      <ObjectId>16398</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>792</StateNumber>
-      <UnderlyingIndexId>16529</UnderlyingIndexId>
+      <StateNumber>752</StateNumber>
+      <UnderlyingIndexId>16397</UnderlyingIndexId>
     </key>
     <column id="278" parent="268" name="id">
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>792</StateNumber>
+      <StateNumber>752</StateNumber>
       <StoredType>uuid|0s</StoredType>
       <TypeId>2950</TypeId>
     </column>
@@ -4928,98 +4934,98 @@ true posixrules
       <DefaultExpression>timezone(&apos;utc&apos;::text, now())</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>792</StateNumber>
+      <StateNumber>752</StateNumber>
       <StoredType>timestamp with time zone|0s</StoredType>
       <TypeId>1184</TypeId>
     </column>
     <column id="280" parent="268" name="sum">
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>792</StateNumber>
+      <StateNumber>752</StateNumber>
       <StoredType>numeric(18,2 digit)|0s</StoredType>
       <TypeId>1700</TypeId>
     </column>
     <column id="281" parent="268" name="user_id">
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StateNumber>792</StateNumber>
+      <StateNumber>752</StateNumber>
       <StoredType>uuid|0s</StoredType>
       <TypeId>2950</TypeId>
     </column>
     <column id="282" parent="268" name="category_id">
       <NotNull>1</NotNull>
       <Position>5</Position>
-      <StateNumber>792</StateNumber>
+      <StateNumber>752</StateNumber>
       <StoredType>uuid|0s</StoredType>
       <TypeId>2950</TypeId>
     </column>
     <foreign-key id="283" parent="268" name="fk_transactions_users_user_id">
       <ColNames>user_id</ColNames>
-      <ObjectId>16551</ObjectId>
+      <ObjectId>16419</ObjectId>
       <OnDelete>cascade</OnDelete>
-      <StateNumber>792</StateNumber>
+      <StateNumber>752</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>16531</RefTableId>
+      <RefTableId>16399</RefTableId>
     </foreign-key>
     <foreign-key id="284" parent="268" name="fk_transactions_categorys_category_id">
       <ColNames>category_id</ColNames>
-      <ObjectId>16546</ObjectId>
+      <ObjectId>16414</ObjectId>
       <OnDelete>restrict</OnDelete>
-      <StateNumber>792</StateNumber>
+      <StateNumber>752</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>16526</RefTableId>
+      <RefTableId>16394</RefTableId>
     </foreign-key>
     <index id="285" parent="268" name="pk_transactions">
       <ColNames>id</ColNames>
-      <ObjectId>16544</ObjectId>
+      <ObjectId>16412</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>792</StateNumber>
+      <StateNumber>752</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <index id="286" parent="268" name="ix_transactions_user_id">
       <ColNames>user_id</ColNames>
-      <ObjectId>16557</ObjectId>
-      <StateNumber>792</StateNumber>
+      <ObjectId>16425</ObjectId>
+      <StateNumber>752</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <index id="287" parent="268" name="ix_transactions_category_id">
       <ColNames>category_id</ColNames>
-      <ObjectId>16556</ObjectId>
-      <StateNumber>792</StateNumber>
+      <ObjectId>16424</ObjectId>
+      <StateNumber>752</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="288" parent="268" name="pk_transactions">
-      <ObjectId>16545</ObjectId>
+      <ObjectId>16413</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>792</StateNumber>
-      <UnderlyingIndexId>16544</UnderlyingIndexId>
+      <StateNumber>752</StateNumber>
+      <UnderlyingIndexId>16412</UnderlyingIndexId>
     </key>
     <column id="289" parent="269" name="id">
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>792</StateNumber>
+      <StateNumber>752</StateNumber>
       <StoredType>uuid|0s</StoredType>
       <TypeId>2950</TypeId>
     </column>
     <column id="290" parent="269" name="login">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>792</StateNumber>
+      <StateNumber>752</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="291" parent="269" name="password">
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>792</StateNumber>
+      <StateNumber>752</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="292" parent="269" name="balance">
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StateNumber>792</StateNumber>
+      <StateNumber>752</StateNumber>
       <StoredType>numeric(18,2 digit)|0s</StoredType>
       <TypeId>1700</TypeId>
     </column>
@@ -5027,7 +5033,7 @@ true posixrules
       <DefaultExpression>timezone(&apos;utc&apos;::text, now())</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>5</Position>
-      <StateNumber>792</StateNumber>
+      <StateNumber>752</StateNumber>
       <StoredType>timestamp with time zone|0s</StoredType>
       <TypeId>1184</TypeId>
     </column>
@@ -5035,23 +5041,23 @@ true posixrules
       <DefaultExpression>false</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>6</Position>
-      <StateNumber>792</StateNumber>
+      <StateNumber>752</StateNumber>
       <StoredType>boolean|0s</StoredType>
       <TypeId>16</TypeId>
     </column>
     <index id="295" parent="269" name="pk_users">
       <ColNames>id</ColNames>
-      <ObjectId>16538</ObjectId>
+      <ObjectId>16406</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>792</StateNumber>
+      <StateNumber>752</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="296" parent="269" name="pk_users">
-      <ObjectId>16539</ObjectId>
+      <ObjectId>16407</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>792</StateNumber>
-      <UnderlyingIndexId>16538</UnderlyingIndexId>
+      <StateNumber>752</StateNumber>
+      <UnderlyingIndexId>16406</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

@@ -28,11 +28,8 @@ const TransactionTable: React.FC<Props> = ({
   setTransactions,
 }) => {
   const { addNotification } = useNotification();
-  const [editingTransactionId, setEditingTransactionId] = useState<
-    string | null
-  >(null);
-  const [updatedTransaction, setUpdatedTransaction] =
-    useState<TransactionDto | null>(null);
+  const [editingTransactionId, setEditingTransactionId] = useState<string | null>(null);
+  const [updatedTransaction, setUpdatedTransaction] = useState<TransactionDto | null>(null);
 
   const handleEdit = useCallback((transaction: TransactionDto) => {
     setEditingTransactionId(transaction.id);
@@ -45,12 +42,12 @@ const TransactionTable: React.FC<Props> = ({
         await TransactionService.delete(transactionId);
         const updatedTransactions = transactions.filter(
           (transaction) => transaction.id !== transactionId
-        );
+        );  
         setTransactions(updatedTransactions);
         fetchBalance();
-        addNotification("Транзакцію успішно видалено.", "success");
+        addNotification("The transaction was successfully deleted.", "success");
       } catch (error) {
-        addNotification("Не вдалось видалити транзакцію.", "error");
+        addNotification("Unable to delete transaction.", "error");
         console.error("Failed to delete transaction", error);
       }
     },
@@ -63,7 +60,7 @@ const TransactionTable: React.FC<Props> = ({
         const selectedCategory = categories.find(
           (category) => category.name === updatedTransaction.categoryName
         );
-        if (!selectedCategory) throw new Error("Категорія не знайдена");
+        if (!selectedCategory) throw new Error("Category not found");
 
         await TransactionService.update(updatedTransaction.id, {
           sum: updatedTransaction.sum,
@@ -77,9 +74,9 @@ const TransactionTable: React.FC<Props> = ({
         setEditingTransactionId(null);
         setUpdatedTransaction(null);
         fetchBalance();
-        addNotification("Транзакцію успішно збережено.", "success");
+        addNotification("The transaction was successfully saved.", "success");
       } catch (error) {
-        addNotification("Не вдалось зберегти транзакцію.", "error");
+        addNotification("The transaction could not be saved.", "error");
         console.error("Failed to save transaction", error);
       }
     }
@@ -93,24 +90,21 @@ const TransactionTable: React.FC<Props> = ({
   ]);
 
   return (
-    <div className="Table">
-      <h1 className="TransactionName">Ваші транзакції</h1>
-      <div className="files-table">
-        <div className="files-table-header">
-          <div className="column-header table-cell column-create-date">
-            Create Date
-          </div>
-          <div className="column-header table-cell column-sum">Sum</div>
-          <div className="column-header table-cell column-category">
-            Category
-          </div>
-          <div className="column-header table-cell column-action">Action</div>
+    <div className="tt-container">
+      <h1 className="tt-title">Your transactions</h1>
+      <div className="tt-table">
+        <div className="tt-table-header">
+          <div className="tt-column-header tt-col-date">Create Date</div>
+          <div className="tt-column-header tt-col-sum">Sum</div>
+          <div className="tt-column-header tt-col-category">Category</div>
+          <div className="tt-column-header tt-col-action">Action</div>
         </div>
+
         {transactions
           .slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
           .map((transaction) => (
-            <div key={transaction.id} className="files-table-row">
-              <div className="table-cell column-create-date">
+            <div key={transaction.id} className="tt-table-row">
+              <div className="tt-cell tt-col-date">
                 {new Date(transaction.createdAt).toLocaleString("uk-UA", {
                   year: "numeric",
                   month: "2-digit",
@@ -119,7 +113,7 @@ const TransactionTable: React.FC<Props> = ({
                   minute: "2-digit",
                 })}
               </div>
-              <div className="table-cell column-sum">
+              <div className="tt-cell tt-col-sum">
                 {editingTransactionId === transaction.id ? (
                   <input
                     type="number"
@@ -130,17 +124,17 @@ const TransactionTable: React.FC<Props> = ({
                         sum: Number(e.target.value),
                       })
                     }
-                    style={{ paddingRight: "20px" }}
+                    className="tt-input"
                   />
                 ) : (
                   `${transaction.sum.toLocaleString()} $`
                 )}
               </div>
 
-              <div className="table-cell column-category">
+              <div className="tt-cell tt-col-category">
                 {editingTransactionId === transaction.id ? (
                   <select
-                    className="SelectCategoryEdit"
+                    className="tt-select"
                     value={updatedTransaction?.categoryName || ""}
                     onChange={(e) =>
                       setUpdatedTransaction({
@@ -159,24 +153,18 @@ const TransactionTable: React.FC<Props> = ({
                   transaction.categoryName
                 )}
               </div>
-              <div className="table-cell column-action action-cell">
+              <div className="tt-cell tt-col-action">
                 {editingTransactionId === transaction.id ? (
-                  <button
-                    className="action-button save-btn"
-                    onClick={handleSave}
-                  >
+                  <button className="tt-btn tt-save" onClick={handleSave}>
                     Save
                   </button>
                 ) : (
-                  <button
-                    className="action-button edit-btn"
-                    onClick={() => handleEdit(transaction)}
-                  >
+                  <button className="tt-btn tt-edit" onClick={() => handleEdit(transaction)}>
                     Edit
                   </button>
                 )}
                 <button
-                  className="action-button delete-btn"
+                  className="tt-btn tt-delete"
                   onClick={() => handleDelete(transaction.id)}
                 >
                   Delete
@@ -184,7 +172,8 @@ const TransactionTable: React.FC<Props> = ({
               </div>
             </div>
           ))}
-        <Pagination
+
+          <Pagination
           currentPage={currentPage}
           totalPages={totalPages}
           handlePageChange={handlePageChange}
@@ -193,4 +182,5 @@ const TransactionTable: React.FC<Props> = ({
     </div>
   );
 };
+
 export default TransactionTable;

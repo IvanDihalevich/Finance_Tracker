@@ -3,7 +3,6 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Layout from "../components/leyouts/Layout";
 import Login from "../components/Register/Login";
 import Register from "../components/Register/Register";
-import BankList from "../features/banks/BankPage";
 import ProtectedRoute from "./ProtectedRoute";
 import TransactionPage from "../features/transactions/TransactionPage";
 import StatisticPage from "../features/statistics/StatisticPage";
@@ -22,7 +21,6 @@ const BasicRouter: React.FC = () => {
           </Layout>
         }
       >
-        <Route path="/bank" element={<BankList />} />
         <Route path="/transaction" element={<TransactionPage />} />
         <Route path="/statistic" element={<StatisticPage />} />
         <Route path="/category" element={<CategoryStatisticComponent />} />

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import AuthService from "../../api/services/AuthService";
-import "../../css/Header.css";
+import styles from "../../css/Header.module.css";
 
 const Header: React.FC = () => {
   const navigate = useNavigate();
@@ -10,13 +10,11 @@ const Header: React.FC = () => {
   const getHeaderTitle = () => {
     switch (location.pathname) {
       case "/transaction":
-        return "Your Transaction";
-      case "/bank":
-        return "Your Banks";
+        return "Transactions Page";
       case "/statistic":
-        return "Your Statistic";
+        return "Statistics Page";
       case "/category":
-        return "Statistic by Category";
+        return "Category Page";
       default:
         return "Welcome to FinanceTracker";
     }
@@ -29,53 +27,40 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <nav>
-        <div className="container">
-          <h1 id="logo">FinanceTracker</h1>
-          <ul className="nav-items">
+      <header className={styles.header}>
+        <div className={styles.headerDarkContainer}>
+          <h1 className={styles.headerDarkLogo}>Finvisor</h1>
+
+          <ul className={styles.headerDarkNavItems}>
             {AuthService.isAuthenticated() && (
               <>
-                <li>
-                  <Link to="/transaction">Your Transaction</Link>
-                </li>
-                <li>
-                  <Link to="/bank">Your Banks</Link>
-                </li>
-                <li>
-                  <Link to="/category">Category</Link>
-                </li>
-                <li>
-                  <Link to="/statistic">Statistic</Link>
-                </li>
+                <li><Link to="/transaction">Transactions</Link></li>
+                <li><Link to="/category">Categories</Link></li>
+                <li><Link to="/statistic">Statistics</Link></li>
               </>
             )}
           </ul>
-          <ul className="auth-links">
+
+          <ul className={styles.headerDarkAuthLinks}>
             {AuthService.isAuthenticated() ? (
               <li>
-                <Link to="/login" onClick={handleLogout}>
-                  Logout
-                </Link>
+                <Link to="/login" onClick={handleLogout}>Logout</Link>
               </li>
             ) : (
               <>
-                <li>
-                  <Link to="/login">Login</Link>
-                </li>
-                <li>
-                  <Link to="/register">Register</Link>
-                </li>
+                <li><Link to="/login">Login</Link></li>
+                <li><Link to="/register">Register</Link></li>
               </>
             )}
           </ul>
         </div>
-      </nav>
-      <header>
-        <div>
+      </header>
+
+      <header className={styles.headerDarkBanner}>
+        <div className={styles.headerDarkTitle}>
           <h1>{getHeaderTitle()}</h1>
         </div>
       </header>
-      <div id="nav-bg"></div>
     </>
   );
 };

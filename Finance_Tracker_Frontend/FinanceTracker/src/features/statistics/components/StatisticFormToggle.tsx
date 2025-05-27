@@ -18,7 +18,7 @@ const StatisticFormToggle: React.FC<Props> = ({
         }`}
         onClick={() => handleFormToggle("CardPlusActive")}
       >
-        Доходи
+        Income
       </h1>
       <h1
         className={`StatisticName ${
@@ -26,7 +26,7 @@ const StatisticFormToggle: React.FC<Props> = ({
         }`}
         onClick={() => handleFormToggle("CardMinusActive")}
       >
-        Витрати
+        Spending
       </h1>
     </div>
   );

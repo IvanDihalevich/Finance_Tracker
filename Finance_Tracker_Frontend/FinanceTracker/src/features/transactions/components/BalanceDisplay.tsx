@@ -6,7 +6,7 @@ type Props = {
 
 const BalanceDisplay = React.memo(({ balance }: Props) => (
   <div className="RightContainer">
-    <h1 className="TransactionName">Баланс</h1>
+    <h1 className="TransactionName">Balance</h1>
     <div className="Balance">
       <h1 className="BalanceText">{balance.toLocaleString()} $</h1>
     </div>

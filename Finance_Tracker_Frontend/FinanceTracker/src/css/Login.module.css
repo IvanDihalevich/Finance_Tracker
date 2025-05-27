@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background: #0f0f0f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.ring {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ringLayer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid;
+  animation: rotate 6s linear infinite, colorShift 5s ease-in-out infinite alternate;
+  opacity: 0.8;
+}
+
+.ringLayer:nth-child(1) {
+  animation-delay: 0s, 0s;
+  transform: scale(1);
+}
+.ringLayer:nth-child(2) {
+  animation-delay: 2s, 1s;
+  transform: scale(1.1);
+}
+.ringLayer:nth-child(3) {
+  animation-delay: 4s, 2s;
+  transform: scale(1.2);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes colorShift {
+  0% {
+    border-color: red;
+  }
+  25% {
+    border-color: orange;
+  }
+  50% {
+    border-color: lime;
+  }
+  75% {
+    border-color: cyan;
+  }
+  100% {
+    border-color: violet;
+  }
+}
+
+.formContainer {
+  position: absolute;
+  padding: 40px;
+  width: 100%;
+  max-width: 320px;
+  background: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  z-index: 10;
+  text-align: center;
+}
+
+.title {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.inputGroup {
+  margin-bottom: 15px;
+}
+
+.inputGroup input[type="text"],
+.inputGroup input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  background: #333;
+  color: #fff;
+}
+
+.inputGroup input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  background: linear-gradient(to right, #ff4b2b, #ff416c, #f9d423);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.inputGroup input[type="submit"]:hover {
+  filter: brightness(1.1);
+}
+
+.linkGroup {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  font-size: 0.85em;
+}
+
+.linkGroup a {
+  color: #bbb;
+  text-decoration: none;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.authContainer {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+  
+  .squareBorder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 420px;
+    height: 420px;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .borderLayer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid;
+    border-radius: 8px;
+    opacity: 0.8;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    pointer-events: none;
+  }
+  
+  .registerContainer {
+    width: 100%;
+    height: 100vh;
+    background: #0f0f0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .registerBackgroundSquares {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .registerSquare {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: transparent;
+    border: 3px solid;
+    animation: rotateSquare 10s linear infinite, colorShift 5s ease-in-out infinite alternate;
+    opacity: 0.5;
+  }
+  
+  .registerSquare:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    animation-delay: 0s;
+  }
+  .registerSquare:nth-child(2) {
+    top: 60%;
+    left: 10%;
+    animation-delay: 1.5s;
+  }
+  .registerSquare:nth-child(3) {
+    top: 30%;
+    left: 70%;
+    animation-delay: 3s;
+  }
+  .registerSquare:nth-child(4) {
+    top: 80%;
+    left: 60%;
+    animation-delay: 4.5s;
+  }
+  
+  @keyframes rotateSquare {
+    0% {
+      transform: rotate(0deg) translateX(0) scale(1);
+    }
+    50% {
+      transform: rotate(180deg) translateX(30px) scale(1.1);
+    }
+    100% {
+      transform: rotate(360deg) translateX(0) scale(1);
+    }
+  }
+  
+  @keyframes colorShift {
+    0% {
+      border-color: red;
+    }
+    25% {
+      border-color: orange;
+    }
+    50% {
+      border-color: lime;
+    }
+    75% {
+      border-color: cyan;
+    }
+    100% {
+      border-color: violet;
+    }
+  }
+  
+  .registerCard {
+    position: relative;
+    padding: 40px;
+    width: 100%;
+    max-width: 350px;
+    background: #1e1e1e;
+    border-radius: 12px;
+    z-index: 10;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+  }
+  
+  .registerTitle {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .registerForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .registerInput {
+    padding: 12px 20px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    background: #333;
+    color: #fff;
+  }
+  
+  .registerButton {
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(to right, #ff4b2b, #ff416c, #f9d423);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .registerButton:hover {
+    filter: brightness(1.1);
+  }
+  
+  .registerError {
+    color: red;
+    font-size: 0.9em;
+  }
+  
+  .registerSwitch {
+    margin-top: 10px;
+    font-size: 0.85em;
+    color: #bbb;
+  }
+  
+  .registerSwitch a {
+    color: #f39c12;
+    text-decoration: none;
+  }
